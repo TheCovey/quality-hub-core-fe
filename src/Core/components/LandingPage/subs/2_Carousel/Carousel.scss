@@ -1,0 +1,96 @@
+.features {
+	margin-top: 2rem;
+	padding: 0 0 10rem;
+}
+
+.carousel {
+	display: flex;
+	justify-content: space-around;
+	width: 900px;
+	margin: 2rem auto 0;
+
+	@media screen and (max-width: 920px) {
+		width: 600px;
+	}
+
+	@media screen and (max-width: 640px) {
+		width: 300px;
+	}
+}
+
+.scroll-btn {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: 3rem;
+	&:hover {
+		color: gray;
+	}
+}
+
+.container {
+	display: flex;
+	overflow: hidden;
+	width: 840px;
+	height: 390px;
+	margin: 0 auto;
+	align-items: center;
+
+	@media screen and (max-width: 920px) {
+		width: 560px;
+	}
+
+	@media screen and (max-width: 640px) {
+		width: 280px;
+	}
+}
+
+.content {
+	display: flex;
+	position: relative;
+	transition: transform 700ms ease 100ms;
+}
+
+.feature-card {
+	width: 250px;
+	box-shadow: 1px 1px 2px 2px silver;
+	margin: 0 15px;
+}
+
+.feature-img {
+	width: inherit;
+	height: 180px;
+	object-fit: cover;
+}
+
+.feature-txt {
+	width: inherit;
+	height: 180px;
+	text-align: left;
+	padding: 1rem 7%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	.card-footer {
+		hr {
+			margin: 0.5rem 0;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+	}
+}

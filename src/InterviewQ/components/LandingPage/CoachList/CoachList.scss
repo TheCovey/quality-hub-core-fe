@@ -1,0 +1,83 @@
+@import '../../../../global/styles/variables';
+
+.search-box {
+	margin: auto;
+	width: 40%;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	text-align: center;
+	border-radius: 8px;
+	padding-top: 20px;
+	box-shadow: 0px 4px 5px 4px rgba(200, 200, 200, 0.5),
+		0px 10px 50px 15px rgba(0, 0, 0, 0.1);
+	.search-form {
+		input {
+			border-radius: 2px;
+			border: 0;
+			background-color: rgba(50, 50, 50, 0.05);
+			margin: 10px;
+			padding: 10px;
+			width: 50%;
+		}
+		select {
+			margin: 0rem 0.5rem;
+		}
+	}
+	.search-button {
+		background-color: $main-blue;
+		color: white;
+		padding: 10px 40px;
+		position: relative;
+		top: 20px;
+		border-radius: 10px;
+	}
+}
+
+.coach-list {
+	// margin: 2% auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 1080px;
+	// justify-content: flex-start;
+	justify-content: space-evenly;
+	// margin-top: 2.4rem;
+}
+
+.coach-list-container {
+	width:100%;
+	.hidden {
+		display: none;
+	}
+
+	margin-top: 15.8rem;
+	// hr {
+	// 	margin: 5% auto;
+	// 	border: 1px solid rgba(0, 0, 0, 0.2);
+	// 	width: 30%;
+	// 
+	@media screen and (max-width: 1270px){
+		margin-top: 3rem;
+	}
+	@media screen and (max-width: 700px){
+		margin-top: 3rem;
+	}
+}
+
+.coach-list-container-signedout {
+	width:100%;
+	.hidden {
+		display: none;
+	}
+
+	margin-top: 15.8rem;
+	// hr {
+	// 	margin: 5% auto;
+	// 	border: 1px solid rgba(0, 0, 0, 0.2);
+	// 	width: 30%;
+	// 
+	@media screen and (max-width: 1270px){
+		// margin-top: .5rem;
+	}
+	@media screen and (max-width: 700px){
+		margin-top: 3rem;
+	}
+}

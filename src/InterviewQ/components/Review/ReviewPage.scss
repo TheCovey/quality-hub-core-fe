@@ -1,0 +1,15 @@
+@import '../../../global/styles/variables';
+$width: 50%;
+.review-page {
+    margin: 6% auto;
+    text-align: left;
+    width: $width;
+    h2 {
+        font-size: 24px;
+        font-weight: normal;
+    }
+    hr {
+        color: $input-border;
+        margin: 1.0rem 0 3rem 0;
+    }
+}

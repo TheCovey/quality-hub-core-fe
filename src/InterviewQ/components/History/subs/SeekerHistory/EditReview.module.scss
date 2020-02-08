@@ -1,0 +1,37 @@
+.not-editable {
+  cursor: default;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.stars {
+  display: flex;
+  > * {
+    margin: auto;
+  }
+  p {
+    margin: auto auto auto 2.6rem;
+  }
+}
+
+.desc {
+  p {
+    margin: auto 0;
+  }
+
+  button {
+    margin: default auto;
+    height: 20%;
+  }
+}
+
+.input {
+  width: 80% !important;
+  padding: 0;
+  margin: 0;
+}

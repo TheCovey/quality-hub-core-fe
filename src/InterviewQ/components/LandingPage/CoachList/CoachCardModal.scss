@@ -1,0 +1,338 @@
+@import '../../../../global/styles/variables';
+
+#overlay-coachcard-expand {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(72, 72, 72, 0.4);
+	z-index: 999;
+	// cursor: not-allowed;
+}
+
+body {
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+		height: 7px;
+	}
+	::-webkit-scrollbar-corner {
+		background: rgba(0, 0, 0, 0);
+	}
+	::-webkit-scrollbar-thumb {
+		max-height: 100px;
+		background-color: rgba(1, 1, 1, 0.23);
+		border-radius: 3px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: inherit;
+	}
+	::-webkit-scrollbar-track-piece {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+.coachcard-expand-background {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-content: flex-end;
+	align-items: flex-end;
+	width: 41.6rem;
+	height: 59.7rem;
+	left: 50%;
+	top: 6.4rem;
+	transform: translate(-50%);
+	background: white;
+	border-radius: 10px;
+	z-index: 1000;
+	@media screen and (max-width: 550px) {
+		min-width: 550px;
+	}
+	.close-coachcard-expand {
+		position: absolute;
+		top: 6px;
+		right: 7px;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none !important;
+		width: 24px !important;
+		height: 24px !important;
+		color: black;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+.coachcard-expand {
+	display: flex;
+	// width: 31.3rem;
+	// height: 50.1rem;
+	// padding: 3rem;
+	// box-shadow: 2px 2px 5px gray;
+	// border: 1px solid silver;
+	border-radius: 1rem;
+	margin-bottom: 1.3rem;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: left;
+	position: fixed;
+	width: 38.6rem;
+	height: 53rem;
+	overflow: auto;
+	left: 50%;
+	top: 50%;
+	bottom: 10%;
+	transform: translate(-50%, -50%);
+	padding-top: 4rem;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 60px;
+	background: white;
+	border-radius: 10px;
+	text-align: left;
+	z-index: 1000;
+	// .close-coachcard-expand {
+	// 	position: absolute;
+	// 	top: 40px;
+	// 	right: 30px;
+	// 	margin: 0 !important;
+	// 	padding: 0 !important;
+	// 	border: none !important;
+	// 	width: 24px !important;
+	// 	height: 24px !important;
+	// 	color: black;
+	// 	outline: none;
+	// 	cursor: pointer;
+	// }
+	.coachcard-header-expand {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		position: relative;
+		.coachcard-header-txt-expand {
+			text-align: left;
+
+			h3 {
+				// max-width: 210px;
+				font-size: 2rem;
+				font-weight: 600;
+				font-style: normal;
+				line-height: 2.8rem;
+				color: #262626;
+				text-transform: none;
+			}
+			.coach-price {
+				font-size: 1.6rem;
+				font-weight: normal;
+				line-height: 2.4rem;
+				color: $price;
+			}
+		}
+		.coach-photo-expand {
+			width: 8.3rem;
+			height: 8.3rem;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+	.coachcard-header-expand-longname {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+	.coachcard-icon-and-company-position {
+		// border: 1px solid red;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		// align-content: center;
+		// p{
+		// 	border: 1px solid blue;
+		// }
+	}
+	.coachcard-info-expand {
+		margin-bottom: 1.28rem;
+		p {
+			display: flex;
+			align-items: center;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: #595959;
+			width: 40rem;
+
+			.coachcard-icon-industry {
+				// display: inline-block;
+				width: 3rem;
+				display: flex;
+			}
+			.coachcard-icon-expand {
+				display: flex;
+				width: 3rem;
+			}
+			.text {
+				width: 90%;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.coachcard-posloc {
+		display: inline-block;
+		max-width: 20rem;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.coachcard-description-expand {
+		p {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 30px;
+			color: #3c4043;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			width: 400px;
+			margin-bottom: 10px;
+		}
+	}
+	.tags {
+		p {
+			display: flex-wrap;
+			padding: none;
+			margin: none;
+		}
+	}
+	.coachcard-tags-container-expand {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 25px;
+		p {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: left;
+			border-radius: 100px;
+			line-height: 2.2rem;
+			color: #096dd9;
+		}
+		.coachcard-tag-button-expand {
+			background-color: lightgray;
+			margin: 0.5% 0.9%;
+			padding: 0% 2.5% 0% 2%;
+			border-radius: 100px;
+			font-size: 1.4rem;
+			font-weight: 500;
+			height: 28px;
+			width: max-content;
+			align-items: center;
+			flex-wrap: nowrap;
+			white-space: nowrap;
+			background: rgba(9, 109, 217, 0.1);
+		}
+	}
+	.coachcard-footer-expand {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		//width: 300px;
+		margin-bottom: 3rem;
+		.coachcard-links-expand {
+			margin-top: 20px;
+			width: 6.2rem;
+			// align-items: baseline;
+			align-self: flex-start;
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			margin-top: 12px;
+			text-decoration: none;
+			color: #ffffff;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 22px;
+			width: 100%;
+		}
+		.interview-button-expand {
+			font-size: 1.4rem;
+			font-style: normal;
+			line-height: 2.2rem;
+			background-color: $main-blue;
+			text-align: center;
+			text-decoration: none;
+			color: white;
+			border-radius: 0.5rem;
+			width: 100%;
+			height: 4.2rem;
+			cursor: pointer;
+			&:hover {
+				background-color: #0050b3;
+			}
+		}
+	}
+}
+
+.preview-desc {
+	min-height: 8rem;
+}
+
+.coachcard-expand-inner {
+	height: 100%;
+}
+
+.coachcard-expand-rating {
+	cursor: pointer;
+	display: flex;
+	align-self: flex-start;
+	align-items: center;
+	.text {
+		font-weight: 600;
+		font-size: 14px;
+	}
+}
+
+.coachcard-expand-stars {
+	display: flex;
+	align-items: center;
+	height: 20px;
+}
+
+.rating-score {
+	margin-left: 7px;
+}
+
+.interview-button-disabled-expand {
+	display: flex;
+	border-radius: 0.5rem;
+	font-size: 1.4rem;
+	font-style: normal;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	line-height: 2.2rem;
+	background-color: #efefef;
+	text-align: center;
+	color: #5f6368;
+	align-items: center;
+	width: 100%;
+	height: 4.2rem;
+	padding: 0;
+	margin-top: 1.2rem;
+	a {
+		text-decoration: none;
+		color: #5f6368;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 22px;
+	}
+}

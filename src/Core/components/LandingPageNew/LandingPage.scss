@@ -1,0 +1,512 @@
+.main-blue {
+	color: #096dd9;
+}
+
+.landing-page {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 600;
+	background-color: white;
+}
+
+.landing-page-nav {
+	position: absolute;
+	// top: 8.8rem;
+	top: 2.4rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 9.9rem;
+	padding-right: 9.8rem;
+
+	@media screen and (max-width: 750px) {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	h1 {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		letter-spacing: 0.03em;
+		color: #ffffff;
+	}
+
+	.landing-page-nav-right {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 750px) {
+			margin-top: 1.2rem;
+		}
+
+		@media screen and (max-width: 400px) {
+			.landing-page-nav-grid-dropdown {
+				display: none;
+			}
+		}
+
+		.landing-page-nav-link {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: #ffffff;
+			cursor: pointer;
+			text-decoration: none;
+
+			margin-left: 3.2rem;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			// @media screen and (max-width: 400px) {
+			// 	&:first-of-type {
+			// 		display: none;
+			// 	}
+
+			// 	&:nth-of-type(2) {
+			// 		display: none;
+			// 	}
+			// }
+		}
+
+		.landing-page-nav-grid-dropdown,
+		.landing-page-nav-avatar {
+			margin-left: 1.6rem;
+
+			a {
+				text-decoration: none;
+				color: #3c4043;
+			}
+		}
+
+		// .landing-page-nav-grid-dropdown {
+		// 	@media screen and (max-width: 400px) {
+		// 		margin-left: -1.6rem;
+		// 	}
+		// }
+	}
+}
+
+.landing-page-button {
+	margin-top: 3.9rem;
+	width: 23rem;
+	height: 7rem;
+	background: #096dd9;
+	border-radius: 0.6rem;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #0050b3;
+	}
+}
+
+.landing-page-header {
+	background-image: url('./images/Header.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 85.1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.landing-page-header-content {
+		margin: 0 11.8rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media screen and (max-width: 800px) {
+			align-items: center;
+			margin: 0 6rem;
+		}
+
+		@media screen and (max-width: 400px) {
+			margin: 0 3rem;
+		}
+
+		.landing-page-header-text {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 5.6rem;
+			line-height: 7rem;
+			color: #ffffff;
+			text-align: left;
+
+			@media screen and (max-width: 800px) {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.landing-page-about {
+	// margin: 0 12.09rem 6.974rem 18rem;
+	margin: 0 12rem 7rem;
+	padding-top: 8rem;
+	background-image: url('./images/shapes_about.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	@media screen and (max-width: 600px) {
+		margin: 0 6rem 0;
+	}
+
+	@media screen and (max-width: 400px) {
+		margin: 0 3rem 0;
+	}
+
+	.landing-page-about-top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 3.8rem;
+			line-height: 4.6rem;
+			color: #202124;
+		}
+
+		p {
+			margin-top: 3.2rem;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 2rem;
+			line-height: 3.5rem;
+			color: #5f6368;
+			text-align: center;
+
+			max-width: 72.3rem;
+		}
+	}
+
+	.landing-page-about-bottom {
+		margin-top: 12.1rem;
+		margin-bottom: 14.1rem;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-evenly;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (max-width: 800px) {
+			margin-bottom: 2rem;
+		}
+
+		h2 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 3rem;
+			line-height: 3.8rem;
+			color: #202124;
+			margin-bottom: 4.8rem;
+		}
+
+		ul {
+			list-style: none;
+
+			li {
+				.bullet {
+					display: inline-block;
+					width: 0.8rem;
+					height: 0.8rem;
+					background: #5f6368;
+					transform: rotate(45deg);
+					margin-right: 1.669rem;
+				}
+
+				display: flex;
+				align-items: center;
+
+				text-align: left;
+				margin-bottom: 2.4rem;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				color: #5f6368;
+			}
+		}
+
+		.landing-page-about-sample-cards {
+			width: 58.3rem;
+			height: 49.8rem;
+			background-image: url('./images/CoachCards.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-left: 11.2rem;
+
+			// @media screen and (max-width: 1210px) {
+			// margin-left: 0rem;
+			// }
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				height: 65vw;
+				margin-left: 0rem;
+			}
+		}
+	}
+}
+
+.landing-page-services {
+	background-image: url('./images/services.png');
+	padding-top: 8rem;
+	padding-bottom: 8.8rem;
+
+	.landing-page-services-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 5%;
+
+		h2 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 3.8rem;
+			line-height: 4.6rem;
+			color: #ffffff;
+		}
+
+		p {
+			margin-top: 1.5rem;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 2rem;
+			line-height: 3.5rem;
+			color: rgba(255, 255, 255, 0.7);
+
+			max-width: 72.3rem;
+		}
+	}
+
+	.landing-page-services-cards-wrapper {
+		margin: 5.6rem auto;
+		max-width: 124.2rem;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.landing-page-service-card {
+		width: 90%;
+		max-width: 40rem;
+		height: 41.1rem;
+		margin: 2.1rem auto;
+		border-radius: 0.4rem;
+		background-color: white;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 0 2rem white;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.landing-page-service-card-img {
+			height: 21.6rem;
+			background-color: silver;
+			border-top-left-radius: 0.4rem;
+			border-top-right-radius: 0.4rem;
+		}
+
+		.landing-page-service-card-txt {
+			margin: 3.6rem auto 5.3rem;
+			width: 32.5rem;
+			height: 10.6rem;
+			padding: 0 5%;
+
+			h3 {
+				font-style: normal;
+				font-weight: 600;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				color: #202124;
+			}
+
+			p {
+				margin-top: 2.6rem;
+				top: 58.6%;
+				bottom: 40.14%;
+
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.6rem;
+				line-height: 2.6rem;
+				color: #202124;
+			}
+		}
+	}
+}
+
+.landing-page-users {
+	padding-top: 8rem;
+	background-image: url('./images/shapes_users.png');
+	background-repeat: no-repeat;
+	border: 1px solid white;
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 3.8rem;
+		line-height: 4.6rem;
+		color: #202124;
+		width: 90%;
+		max-width: 65.2rem;
+		margin: 0 auto;
+	}
+
+	.landing-page-user-cards-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		width: 90%;
+		max-width: 118.1rem;
+		margin: 12.5rem auto 10rem;
+		justify-content: space-evenly;
+
+		.landing-page-user-card {
+			width: 90%;
+			max-width: 33.9rem;
+			height: 20rem;
+			margin-bottom: 5rem;
+			background-color: white;
+
+			.landing-page-user-card-header {
+				display: flex;
+				align-items: center;
+
+				.landing-page-user-card-img {
+					width: 8rem;
+					height: 8rem;
+					border-radius: 4rem;
+					margin-right: 2.4rem;
+					// background-image: url('./images/Person1.png');
+				}
+
+				.landing-page-user-card-txt {
+					text-align: left;
+
+					h3 {
+						font-style: normal;
+						font-weight: 600;
+						font-size: 2rem;
+						line-height: 2.8rem;
+						color: #202124;
+					}
+
+					h4 {
+						font-style: normal;
+						font-weight: 600;
+						font-size: 1.6rem;
+						line-height: 2.4rem;
+						color: #5f6368;
+					}
+				}
+			}
+
+			p {
+				margin-top: 1.6rem;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.6rem;
+				line-height: 2.6rem;
+				color: #202124;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.landing-page-footer {
+	background-color: #3c4043;
+	padding: 8.8rem 9.9rem 5.5rem;
+
+	@media screen and (max-width: 900px) {
+		padding: 8.8rem 5rem 5.5rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		padding: 8.8rem 2rem 5.5rem;
+	}
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 3rem;
+		line-height: 3.8rem;
+		color: #ffffff;
+	}
+
+	hr {
+		margin-top: 8.8rem;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		margin-bottom: 4.7rem;
+	}
+
+	.landing-page-footer-logo {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		color: #ffffff;
+		text-align: left;
+
+		@media screen and (max-width: 730px) {
+			text-align: center;
+		}
+	}
+
+	.landing-page-footer-row {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: rgba(255, 255, 255, 0.5);
+
+		@media screen and (max-width: 730px) {
+			flex-direction: column;
+			align-items: center;
+			height: 10rem;
+			justify-content: space-between;
+		}
+
+		.landing-page-footer-links {
+			display: flex;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				margin: 0 2.2rem;
+			}
+		}
+
+		.landing-page-footer-social {
+			display: flex;
+
+			a {
+				margin-left: 3.2rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,322 @@
+.unavailable-to-book {
+	display: none;
+}
+
+.interviewq-content-container {
+	border: 1px solid #dadce0;
+	border-radius: 0.8rem;
+	padding-top: 3.2rem;
+	margin-bottom: 8rem;
+}
+
+.coach-availability {
+	//padding-top: 5.6rem;
+	padding-left: 5rem;
+	padding-bottom: 6.4rem;
+}
+
+.booking-button-container {
+	width: 100;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 11.9rem;
+	margin-top: 0;
+}
+.interviewq-create-booking-dropzone {
+	border: 1px dashed #d9d9d9;
+	width: 738px;
+	height: 174px;
+	background-color: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+	border-radius: 0.4rem;
+}
+.interviewq-dropped-file {
+	background-color: #d9d9d9;
+	transition: 1s;
+}
+.interviewq-dropzone-text {
+	margin-top: 17px;
+	// border: 1px solid red;
+}
+.formsection {
+	display: flex;
+	//margin: 40px auto;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+	// border: 1px solid #dadce0;
+	// border-radius: 0.8rem;
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		text-align: left;
+		color: #202124;
+		// margin-left: 1rem;
+		margin-bottom: 6rem;
+	}
+
+	h3 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		color: #5f6368;
+		text-transform: uppercase;
+	}
+	p {
+		text-align: left;
+	}
+}
+
+.booking-content-section {
+	flex-direction: column;
+	margin: 5rem auto 0;
+	display: flex;
+	width: 92%;
+	max-width: 94.2rem;
+
+	@media screen and (max-width: 1500px) {
+		margin-left: 27rem;
+	}
+
+	@media screen and (max-width: 1270px) {
+		margin: 0 auto;
+	}
+}
+
+.request-interview-slot-list {
+	width: 25rem;
+	margin-left: 5.6rem;
+	height: 40rem;
+	overflow-y: scroll;
+	position: relative;
+}
+
+.disabled-interview-slot {
+	display: none;
+}
+
+.booking-header-container {
+	padding-bottom: 1.6rem;
+	border-bottom: 1px solid #dadce0;
+	margin-bottom: 3.2rem;
+	h2 {
+		margin-bottom: 0;
+		font-weight: 600;
+		font-size: 24px;
+	}
+}
+
+.booking-first-header {
+	margin-top: 3.2rem;
+}
+
+.booking-subheading {
+	margin-bottom: 4.8rem;
+
+	p {
+		font-size: 1.6rem;
+		color: #3c4043;
+	}
+}
+
+.interviewq-booking-input {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	text-align: left;
+	margin: 17px 102px;
+	h3 {
+		font-weight: 500;
+		color: #333333;
+		text-transform: none;
+		font-size: 1.6rem;
+	}
+	textarea {
+		height: 130px;
+		margin: 8px 0;
+	}
+}
+
+.interviewq-confirmed-interview {
+	// margin-top: 150px;
+	// padding-top: 150px;
+	// width: 723px;
+	// height: 636px;
+	// border: 1px solid #D4D4D4;
+	// box-sizing: border-box;
+	// box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+	//   h2{
+	//     font-size: 36px;
+	//     margin-bottom: 40px;
+	//   }
+	//   p{
+	//     font-size: 16px;
+	//     margin-bottom: 25px;
+	//   }
+}
+
+.interviewq-conf-container {
+	margin-top: 40px;
+	padding: 40px 50px;
+	div:last-of-type {
+		border: none;
+	}
+}
+.interviewq-conf-section {
+	height: 5.7rem;
+	padding: 15px 0;
+	border-bottom: 1px solid #d4d4d4;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	h3 {
+		width: 450px;
+		text-transform: none;
+		font-size: 14px;
+	}
+	p {
+		color: #202124;
+		width: 300px;
+		font-size: 16px;
+	}
+}
+
+.interviewq-conf-heading {
+	border-bottom: 1px solid #d4d4d4;
+	padding-bottom: 10px;
+	margin-bottom: 34px;
+	h2 {
+		margin-bottom: 0;
+	}
+}
+
+.dropboxDiv {
+	p {
+		font-weight: 500;
+		color: #333333;
+		text-transform: none;
+		font-size: 1.2rem;
+	}
+	input {
+		width: 100%;
+		height: 30px;
+		background: black;
+	}
+}
+
+.booking-bottom {
+	p {
+		text-align: center;
+	}
+	width: 100%;
+	margin-bottom: 4rem;
+}
+
+#resumeInput {
+	margin-top: 8px;
+}
+
+.book-interview-button {
+	background-color: #096dd9;
+	color: white;
+	border-radius: 4px;
+	width: 13.1rem;
+	text-decoration: none;
+	display: flex;
+	padding: 6px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	:hover {
+		background-color: #0050b3;
+	}
+	p {
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 15px;
+		//margin: 6px;
+		cursor: pointer;
+	}
+}
+
+.interview-a-secondary {
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 15px;
+	color: #5f6368;
+	margin-right: 48px;
+}
+
+.book-interview-button:hover {
+	background-color: #0050b3;
+}
+
+.interview-button-secondary {
+	height: 4.5rem;
+
+	border: 1px solid #5f6368;
+	border-radius: 4px;
+	width: 13.1rem;
+	text-decoration: none;
+	display: flex;
+	padding: 6px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	p {
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 15px;
+		color: #5f6368;
+	}
+}
+
+.confirmed-interview-modal {
+	border-radius: 0.4rem;
+	z-index: 1100;
+	height: 53.6rem;
+	width: 63.4rem;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #d4d4d4;
+	box-sizing: border-box;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+	.int-confirmation-text {
+		position: relative;
+		top: -60px;
+	}
+	h2 {
+		position: relative;
+		// left: 30px;
+		top: -60px;
+		font-size: 30px;
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+	p {
+		font-size: 16px;
+		// margin-bottom: 25px;
+		color: #3c4043;
+	}
+	button {
+		margin-top: 5.4rem;
+		text-align: center;
+		background-color: #096dd9;
+		color: white;
+		width: 21.6rem;
+		height: 5.4rem;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,153 @@
+@import '../../../global/styles/variables';
+
+.interview-container {
+	margin-top: 6.4rem;
+	@media screen and (max-width: 1269px) {
+		margin-top: 0rem;
+	}
+}
+
+.interview-landing-page {
+	width: 94%;
+	max-width: 108rem;
+	margin: 0 auto;
+	margin-bottom: 3.2rem;
+
+	@media screen and (max-width: 1600px) {
+		margin-left: 25rem;
+	}
+	@media screen and (max-width: 1270px) {
+		width: 94%;
+		margin: 0 auto;
+	}
+}
+
+.become-a-coach-reroute-to-signin {
+	text-decoration: none;
+}
+
+.interviewq-header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #dadce0;
+	margin-bottom: 2.019rem;
+	width: 100%;
+	max-width: 97.4rem;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.interview-header {
+	text-align: left;
+	display: flex;
+	align-items: center;
+
+	// .red-circle {
+	//     background-color: #cf1322;
+	//     width: 60px;
+	//     height: 60px;
+	//     border-radius: 50%;
+	//     display: flex;
+	//     justify-content: center;
+	//     align-items: center;
+	//     margin-right: 1.8rem;
+	// }
+
+	h2 {
+		// display: flex;
+		// flex-wrap: wrap;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+
+		color: #202124;
+	}
+}
+
+.interview-header-search {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	width: 108rem;
+	// .red-circle {
+	//     background-color: #cf1322;
+	//     width: 60px;
+	//     height: 60px;
+	//     border-radius: 50%;
+	//     display: flex;
+	//     justify-content: center;
+	//     align-items: center;
+	//     margin-right: 1.8rem;
+	// }
+
+	h2 {
+		// display: flex;
+		// flex-wrap: wrap;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+
+		color: #202124;
+	}
+}
+.interviewq-search-header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #dadce0;
+	margin-bottom: 2.019rem;
+	width: 100%;
+	max-width: 108rem;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+button {
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	text-align: left;
+}
+
+.interviewq-header-btns {
+	display: flex;
+	justify-content: space-between;
+	@media screen and (max-width: 600px) {
+		align-self: center;
+	}
+	button {
+		border: 1px solid #5f6368;
+		border-radius: 0.6rem;
+		height: 3.6rem;
+		padding: 0 2rem;
+		margin: 0.5rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #5f6368;
+		.becomecoach-btn {
+			display: inline-block;
+			margin-left: 1rem;
+			width: 11rem;
+		}
+		.filters-btn {
+			display: inline-block;
+			margin-left: 1rem;
+		}
+	}
+}

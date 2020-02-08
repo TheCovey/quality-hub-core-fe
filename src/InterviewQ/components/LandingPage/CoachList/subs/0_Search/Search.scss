@@ -1,0 +1,219 @@
+@import '../../../../../../global/styles/variables';
+
+.search-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	padding: 2.4rem 0;
+	position: fixed;
+	top: 6.4rem;
+	z-index: 400;
+
+	width: 100vw;
+	max-width: 107.4rem;
+	// border: 1px solid purple;
+	// margin: 0 0;
+
+
+	h2 {
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 32px;
+		white-space: nowrap;
+		text-align: left;
+	}
+@media screen  and (max-width: 1270px){
+	margin: 0 auto;	
+}
+
+}
+.search-dropdowns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 3rem;
+	width: 100%;
+	max-width: 108rem;
+	margin: 0 auto;
+
+	@media screen and (max-width: 600px) {
+		justify-content: space-around;
+		
+	}
+}
+
+.search-input-search-icon {
+	// margin-bottom: -56px;
+	// padding-left: 10px;
+	// z-index: 30000;
+}
+
+.search-by-keyword-input {
+	// padding-left: 40px;
+	background: none;
+	border-top-left-radius: 10rem;
+	border-bottom-left-radius: 10rem;
+	margin-right: 0;
+
+	// height: 1000px;
+	// background-image: url('https://www.birds.cornell.edu/home/wp-content/uploads/2019/05/IBunting-Kinderman-58737651-FI.gif');
+}
+
+.search-field {
+	// width: 32%;
+	margin-right: 0.8rem;
+	text-align: left;
+	flex-shrink: 2;
+	//margin-bottom: 2rem; 
+
+	select {
+		width: 100%;
+		border: 1px solid #dadce0;
+		border-radius: 10rem;
+	}
+	@media screen and (max-width: 600px) {
+		width: 48%;
+	}
+}
+
+.search-field-keyword {
+	text-align: left;
+	display: flex;
+	align-items: center;
+	// flex-grow: 1;
+	// width: 66%;
+	// // margin-bottom: 1.2rem;
+	// input {
+	// 	width: 100%;
+	// 	border: 1px solid #dadce0;
+	// 	border-radius: 0.6rem;
+	// 	// @media screen and (max-width: 680px) {
+	// 	// }
+	// }
+	@media screen and (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.search-field-bottom {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 1.2rem;
+	@media screen and (max-width: 600px) {
+		margin-top: 0;
+	}
+}
+
+.search-buttons {
+	width: 30%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-self: flex-end;
+	@media screen and (max-width: 600px) {
+		margin-top: 2rem;
+		width: auto;
+	}
+}
+
+.search-reset {
+	// width: 15%;
+	// flex-grow: 1;
+	// font-size: 1.4rem;
+	text-align: center;
+	// border: 1px solid silver;
+	// border-radius: 1rem;
+	cursor: pointer;
+	// height: 3.6rem;
+	padding: 1rem 1.6rem;
+	// font-style: normal;
+	// font-weight: 600;
+	// font-size: 1.4rem;
+	// line-height: 2.2rem;
+	// color: #5f6368;
+	// margin: auto 1rem;
+	// // border: 1px solid;
+	font-size: 14px;
+	line-height: 22px;
+	border-radius: 10rem;
+	border: 1px solid #dadce0;
+}
+
+.search-apply {
+	// 	// width: 15%;
+	// 	flex-grow: 1;
+	// 	margin-left: 1rem;
+	// 	text-align: center;
+	// 	border: 1px solid $main-blue;
+	// 	color: $main-blue;
+	// 	border-radius: 0.5rem;
+	// 	cursor: pointer;
+	// 	height: 3.6rem;
+	// 	padding: 0 1rem;
+	// 	font-style: normal;
+	// 	font-weight: 600;
+	// 	font-size: 1.4rem;
+	// 	line-height: 2.2rem;
+	// 	// margin: auto;
+	// 	// align-self: flex-end;
+	border: 1px solid #dadce0;
+	margin-left: 0;
+	margin-right: 0.8rem;
+	border-top-right-radius: 10rem;
+	border-bottom-right-radius: 10rem;
+	height: 4rem;
+	padding: 1rem 1.4rem;
+}
+
+.search-tags-container {
+	// width: 200px;
+	// display: flex;
+	// 	flex-wrap: wrap;
+	// margin-bottom: 25px;
+
+	p {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: left;
+		border-radius: 100px;
+		line-height: 2.2rem;
+		color: #096dd9;
+	}
+	.search-tags {
+		background-color: lightgray;
+		margin: 0.5% 0.9%;
+		padding: 0% 2.5% 0% 2.5%;
+		border-radius: 100px;
+		font-size: 1.6rem;
+		height: 28px;
+		width: max-content;
+		align-items: center;
+		flex-wrap: nowrap;
+		white-space: nowrap;
+		background: rgba(9, 109, 217, 0.1);
+		span {
+			color: #096dd9;
+		}
+	}
+}
+
+// .input-label {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+// .input-label label {
+// 	text-align: left;
+// 	margin-bottom: -14px;
+// }
+// .input-label p {
+// 	align-self: flex-end;
+// 	margin: 0 0;
+// }
+label {
+	font-weight: bold;
+}

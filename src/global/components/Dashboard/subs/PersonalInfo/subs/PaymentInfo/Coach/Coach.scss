@@ -1,0 +1,137 @@
+.dash-coach {
+	width: 100%;
+	text-align: left;
+
+	.dash-coach-header {
+		h2 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			color: #202124;
+		}
+
+		width: 100%;
+		margin-top: 3.2rem;
+		padding-bottom: 1.6rem;
+		border-bottom: 1px solid #dadce0;
+	}
+
+	.dash-coach-connectstripe {
+		border: 1px solid #dadce0;
+		border-radius: 0.8rem;
+		padding: 2.4rem;
+		margin-top: 4rem;
+
+		h3 {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 2rem;
+			line-height: 2.8rem;
+			color: #202124;
+			margin-bottom: 4rem;
+		}
+
+		.dash-coach-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			p {
+				color: #5f6368;
+			}
+
+			// button {
+			// 	width: 15rem;
+			// 	height: 3.6rem;
+			// 	background-color: #096dd9;
+			// 	border-radius: 0.4rem;
+			// 	font-style: normal;
+			// 	font-weight: 600;
+			// 	font-size: 1.4rem;
+			// 	line-height: 2.2rem;
+			// 	text-align: center;
+			// 	cursor: pointer;
+
+			// 	a {
+			// 		color: #ffffff;
+			// 		text-decoration: none;
+			// 	}
+
+			// 	&:hover {
+			// 		background-color: #0050b3;
+			// 	}
+			// }
+		}
+	}
+}
+
+.coach-stripe-dashboard {
+	border: 1px solid #dadce0;
+	border-radius: 0.8rem;
+	padding: 2.4rem;
+	margin-top: 4rem;
+
+	h3 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		color: #202124;
+		margin-bottom: 4rem;
+	}
+
+	.coach-stripe-dashboard-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 2.4rem;
+
+		.coach-stripe-dashboard-balance {
+			display: flex;
+			flex-direction: column;
+
+			h4 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: #202124;
+			}
+
+			.coach-stripe-dashboard-balance-amount {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	button {
+		width: 15rem;
+		height: 3.6rem;
+		background-color: #096dd9;
+		color: white;
+		border-radius: 0.4rem;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #0050b3;
+		}
+
+		&:disabled {
+			background-color: #efefef;
+			color: #5f6368;
+			cursor: not-allowed;
+		}
+	}
+
+	a {
+		color: #096dd9;
+
+		&:hover {
+			color: #0050b3;
+		}
+	}
+}

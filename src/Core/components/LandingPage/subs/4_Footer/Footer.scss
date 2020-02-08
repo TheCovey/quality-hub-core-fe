@@ -1,0 +1,47 @@
+.footer {
+	margin-top: 10rem;
+
+	@media screen and (max-width: 600px) {
+		margin-top: 1rem;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	.footer-center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+	margin: 0 auto;
+}
+
+.footer-line {
+	width: 70px;
+	margin: 2rem 0;
+}
+
+.footer-icons {
+	display: flex;
+	justify-content: space-between;
+	width: 100px;
+	margin: 0 auto 3rem;
+}
+
+.copyright {
+	text-align: right;
+	margin-right: 4%;
+	margin-bottom: 5rem;
+}

@@ -1,0 +1,101 @@
+@import '../../../global/styles/variables';
+
+
+	.QNav {
+		z-index: 900;
+	position: fixed;
+	top: 20.5rem;
+	left: 0;
+	width: 22rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	a {
+		text-decoration: none;
+		margin-bottom: 1.8rem;
+	}
+	
+	a:last-of-type {
+		margin-bottom: 0rem;
+	}
+	
+	@media screen and (max-width: 1270px) {
+		position: static;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 95%;
+		height: auto;
+		margin: 12rem 5% auto;
+		margin-top: 20rem;
+	}
+	@media screen and (max-width: 700px) {
+		justify-content: space-around;
+		width: 100%;
+		margin: 12rem 8% auto;
+		margin-top: 20rem;
+	}
+}
+
+
+.QNav-row {
+	display: flex;
+	width: 18.1rem;
+	height: 4.5rem;
+	padding-left: 2.4rem;
+	align-items: center;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	text-align: center;
+
+	@media screen and (max-width: 450px) {
+		margin-left: 0;
+		width: 15rem;
+	}
+}
+
+.QNav-btn {
+	color: $main-blue;
+	margin-left: 1.6rem;
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+
+	@media screen and (max-width: 450px) {
+		margin-left: 0.5rem;
+	}
+}
+
+.QNav-main {
+	color: $main-blue;
+	margin-left: 1.6rem;
+
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+}
+
+.QNav-row-highlight {
+	margin: 0 0 1.8rem 0;
+	height: 4.5rem;
+	background: $main-blue;
+	border-top-right-radius: 2.25rem;
+	border-bottom-right-radius: 2.25rem;
+	width: 18.1rem;
+	@media screen and (max-width: 1269px) {
+		border-top-left-radius: 2.25rem;
+		border-bottom-left-radius: 2.25rem;
+		border-top-right-radius: 2.25rem;
+		border-bottom-right-radius: 2.25rem;
+	}
+
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+
+	.QNav-btn {
+		color: white;
+	}
+}

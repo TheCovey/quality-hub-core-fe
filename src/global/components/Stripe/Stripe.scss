@@ -1,0 +1,59 @@
+.checkout {
+	width: 100%;
+	max-width: 94.2rem;
+	margin-top: 3.2rem;
+
+	.checkout-header {
+		padding-bottom: 1.6rem;
+		border-bottom: 1px solid #dadce0;
+		margin-bottom: 3.2rem;
+
+		h2 {
+			font-weight: 600;
+			font-size: 2rem;
+			text-align: left;
+		}
+	}
+
+	.checkout-box {
+		border: 1px solid #dadce0;
+		border-radius: 0.8rem;
+		padding: 3.2rem;
+
+		display: flex;
+		flex-direction: column;
+
+		p {
+			text-align: left;
+			margin-bottom: 2.4rem;
+		}
+
+		h3 {
+			font-size: 1.8rem;
+			color: inherit;
+			font-weight: normal;
+		}
+
+		button {
+			margin-top: 2.4rem;
+			background-color: #096dd9;
+			color: white;
+			border-radius: 0.4rem;
+			width: 13.1rem;
+			height: 4.5rem;
+			text-decoration: none;
+			text-align: center;
+			padding: 0.6rem;
+			cursor: pointer;
+			align-self: center;
+
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 1.5rem;
+
+			&:hover {
+				background-color: #0050b3;
+			}
+		}
+	}
+}

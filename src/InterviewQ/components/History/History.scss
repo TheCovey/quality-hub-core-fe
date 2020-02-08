@@ -1,0 +1,373 @@
+.history-wrapper {
+	// border: 1px solid#dadce0;
+	border-radius: 0.8rem;
+	width: 90%;
+	max-width: 94.2rem;
+	margin: 9.6rem auto;
+	margin-bottom: 3.2rem;
+	// padding: 4.8rem 10.1rem;
+
+	h2 {
+		text-align: left;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		color: #202124;
+		padding-bottom: 1.6rem;
+		border-bottom: 1px solid #dadce0;
+		margin-bottom: 4rem;
+	}
+}
+
+.coach-history {
+	margin-bottom: 7.2rem;
+	@media screen and (max-width: 1600px) {
+		margin-left: 7rem;
+	}
+}
+.interviewq-seeker-history {
+	@media screen and (max-width: 1600px) {
+		margin-left: 7rem;
+	}
+}
+
+.coach-history-headings,
+.seeker-history-headings {
+	display: flex;
+	width: 100%;
+	background-color: #fafafa;
+	padding: 1.6rem 0;
+
+	h3 {
+		width: 16.5%;
+		padding-left: 1.6rem;
+		text-align: left;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #202124;
+	}
+}
+
+.coach-history-row,
+.seeker-history-row {
+	display: flex;
+	width: 100%;
+
+	.history-col {
+		width: 16.5%;
+		padding: 3.1rem 0 3rem 1.6rem;
+		text-align: left;
+		border-top: 1px solid #dadce0;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		// color: #3c4043;
+		color: #5f6368;
+		display: flex;
+		align-items: center;
+		overflow-x: scroll;
+	}
+
+	.view-report,
+	.view-review {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	a {
+		font-size: inherit;
+		color: inherit;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+
+	.history-content-toggle {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.arrow-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.history-report,
+.history-review {
+	text-align: left;
+	margin: 2.3rem 7.8rem 3.3rem 1.6rem;
+
+	h4 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		text-decoration-line: underline;
+		color: #202124;
+		margin-bottom: 0.8rem;
+	}
+
+	p {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.6rem;
+		line-height: 3rem;
+		// color: #3c4043;
+		color: #5f6368;
+		margin-bottom: 3.2rem;
+	}
+}
+
+.coach-history-review,
+.seeker-history-report {
+	padding-bottom: 4.6rem;
+}
+
+.coach-history-review {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-bottom: 1px solid #dadce0;
+
+	.coach-history-no-review {
+		align-self: center;
+	}
+}
+
+.seeker-update-review {
+	cursor: pointer;
+}
+
+.coach-response {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.toggle-coach-response-btn {
+		cursor: pointer;
+		width: 13.2rem;
+		height: 4.5rem;
+		background-color: #efefef;
+		border-radius: 0.4rem;
+		margin-left: 1.6rem;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #5f6368;
+		text-align: center;
+	}
+
+	.add-coach-response {
+		width: 100%;
+		max-width: 87.8rem;
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 1.6rem;
+		}
+
+		.add-coach-response-txtarea {
+			width: 100%;
+			height: 15.7rem;
+			border-radius: 0.3rem;
+			border: none;
+			background-color: #efefef;
+
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.6rem;
+			line-height: 3rem;
+
+			color: #3c4043;
+		}
+
+		.add-coach-response-btns {
+			align-self: flex-end;
+			display: flex;
+			margin-top: 2.4rem;
+
+			button {
+				width: 10.353rem;
+				height: 4.5rem;
+				text-align: center;
+				cursor: pointer;
+
+				font-style: normal;
+				font-weight: 600;
+				font-size: 1.4rem;
+				line-height: 2.2rem;
+			}
+
+			.add-coach-response-cancel-btn {
+				border: 1px solid #5f6368;
+				border-radius: 0.4rem;
+				color: #5f6368;
+			}
+
+			.add-coach-response-reply-btn {
+				margin-left: 3.794rem;
+				background: #096dd9;
+				border-radius: 0.5rem;
+				color: #fff;
+			}
+		}
+	}
+
+	.view-coach-response {
+		width: 100%;
+		padding-left: 1.6rem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+
+		color: #3c4043;
+
+		.view-coach-response-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+
+			.view-coach-response-headerleft {
+				display: flex;
+
+				h4 {
+					font-style: normal;
+					font-weight: 600;
+					font-size: 1.4rem;
+					line-height: 2.2rem;
+					text-decoration-line: underline;
+
+					color: #202124;
+				}
+
+				.view-coach-response-date {
+					margin-left: 2.4rem;
+				}
+			}
+
+			.view-coach-response-headerright {
+				display: flex;
+
+				.view-coach-response-save {
+					cursor: pointer;
+
+					&:hover {
+						color: #096dd9;
+					}
+				}
+
+				.view-coach-response-cancel {
+					cursor: pointer;
+					margin-left: 2.4rem;
+
+					&:hover {
+						color: #096dd9;
+					}
+				}
+
+				.view-coach-response-edit {
+					cursor: pointer;
+
+					&:hover {
+						color: #096dd9;
+					}
+				}
+			}
+		}
+
+		p {
+			text-align: left;
+			margin-top: 1.5rem;
+		}
+
+		.edit-coach-response-txtarea {
+			margin-top: 1.6rem;
+			width: 100%;
+			height: 15.7rem;
+			border-radius: 0.3rem;
+			border: none;
+			background-color: #efefef;
+
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.6rem;
+			line-height: 3rem;
+
+			color: #3c4043;
+		}
+	}
+}
+
+.history-review {
+	.history-review-rating-container {
+		display: flex;
+		margin-top: 1.6rem;
+		margin-bottom: 4.8rem;
+
+		.history-review-stars-container {
+			width: 19.4rem;
+			margin-right: 2.6rem;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.seeker-history-review {
+	.coach-reply {
+		text-align: left;
+		padding-left: 1.6rem;
+		padding-bottom: 4rem;
+		border-bottom: 1px solid #dadce0;
+
+		.coach-reply-header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.5rem;
+
+			h4 {
+				font-style: normal;
+				font-weight: 600;
+				font-size: 1.4rem;
+				line-height: 2.2rem;
+				text-decoration-line: underline;
+
+				color: #202124;
+			}
+
+			.coach-reply-date {
+				margin-left: 2.4rem;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.4rem;
+				line-height: 3rem;
+				// color: #3c4043;
+				color: #5f6368;
+			}
+		}
+
+		p {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.6rem;
+			line-height: 3rem;
+			// color: #3c4043;
+			color: #5f6368;
+		}
+	}
+}

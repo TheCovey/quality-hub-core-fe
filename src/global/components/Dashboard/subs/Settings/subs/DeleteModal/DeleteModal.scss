@@ -1,0 +1,100 @@
+#overlay-delete-account-modal {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(72, 72, 72, 0.4);
+	z-index: 1040;
+}
+
+.del-modal-container {
+	// position: fixed;
+}
+
+.del-modal-wrapper {
+	z-index: 1050;
+	position: fixed;
+	top: 10rem;
+	left: 50%;
+	transform: translate(-50%);
+	width: 43.2rem;
+	height: 18.8rem;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	padding: 3.2rem 2.5rem 2.5rem 3.3rem;
+
+	p {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #595959;
+		margin-left: 4.247rem;
+	}
+}
+
+.del-modal-header {
+	display: flex;
+	margin-bottom: 0.8rem;
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: #3c4043;
+		margin-left: 1.656rem;
+	}
+}
+
+.del-modal-button-cont {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1rem;
+	padding: 1rem;
+
+	.cancel {
+		width: 7.77rem;
+		height: 3.2rem;
+		background-color: #fff;
+		border: 1px solid #5f6368;
+		border-radius: 0.4rem;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		text-align: center;
+		color: #5f6368;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.ok-button {
+		margin: 0 0.829rem;
+		width: 7.77rem;
+		height: 3.2rem;
+		background-color: #cf1322;
+		border-style: none;
+		color: #fff;
+		border-radius: 0.4rem;
+		text-align: center;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		text-align: center;
+		color: white;
+
+		&:hover {
+			cursor: pointer;
+			background-color: #a8071a;
+		}
+	}
+}

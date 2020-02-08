@@ -1,0 +1,154 @@
+.IQ-editform {
+	display: flex;
+	margin: 40px auto;
+	justify-content: space-between;
+	width: 100%;
+	flex-direction: column;
+	border: 1px solid #dadce0;
+	border-radius: 0.8rem;
+	padding: 2.4rem 0 2.8rem;
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		text-align: left;
+		color: #202124;
+		margin-left: 2.4rem;
+		margin-bottom: 4rem;
+	}
+
+	// h3 {
+	// 	font-style: normal;
+	// 	font-weight: 600;
+	// 	font-size: 2rem;
+	// 	line-height: 2.8rem;
+	// 	color: #202124;
+	// 	text-align: left;
+	// 	margin-bottom: 4rem;
+	// }
+
+	h4.tag-title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		color: #5f6368;
+		// text-transform: uppercase;
+	}
+
+	.post-input.last {
+		border-bottom: none;
+	}
+	.post-row.post-tag {
+		width: 100%;
+	}
+	.hidden {
+		display: none;
+	}
+	.tag-form {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		.tag-input {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.tags-container {
+		width: 100%;
+		p {
+			display: flex;
+			width: 100%;
+			padding: 0 4px;
+			flex-wrap: wrap;
+			border-radius: 100px;
+			line-height: 2.2rem;
+			color: #096dd9;
+
+			.tag-button {
+				background-color: lightgray;
+				// margin: 0.5% 0.5%;
+				margin: 0.75rem 0;
+
+				padding: 0% 1.2%;
+				border-radius: 100px;
+				height: 25px;
+				padding: 0 10px;
+				width: max-content;
+				flex-wrap: nowrap;
+				white-space: nowrap;
+				background: rgba(9, 109, 217, 0.1);
+				span {
+					color: #096dd9;
+					&:hover {
+						color: gray;
+					}
+				}
+			}
+		}
+	}
+}
+
+.IQ-dash-input {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// height: 5rem;
+	border-bottom: 1px solid #dadce0;
+	padding: 0.8rem 2.4rem;
+
+	@media screen and (max-width: 380px) {
+		flex-direction: column;
+		height: 8rem;
+		margin-bottom: 1rem;
+		align-items: flex-start;
+	}
+}
+
+.dash-input:last-of-type {
+	border-bottom: none;
+}
+
+.IQ-dash-row {
+	display: flex;
+	align-items: center;
+	// height: 5rem;
+	width: 100%;
+
+	p {
+		margin: 0.8rem 0rem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		color: #202124;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	textarea,
+	input {
+		width: 92%;
+		max-width: 52.4rem;
+		// margin: 0 1rem;
+		flex-shrink: 1;
+
+		@media screen and (max-width: 940px) {
+			margin: 0 1rem 0 0;
+		}
+	}
+}
+
+.IQ-dash-heading {
+	width: 15.6rem;
+	text-align: left;
+}
+
+.big-tag-boi {
+	width: 100%;
+	padding-left: 20px;
+}

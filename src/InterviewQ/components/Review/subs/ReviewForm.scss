@@ -1,0 +1,71 @@
+@import '../ReviewPage.scss';
+
+.review-form {
+  .review-container {
+    border: 1px solid lightgray;
+    padding: 5% 6%;
+    margin-bottom: 4%;
+  }
+  margin-top: 6%;
+  text-align: left;
+
+  .label {
+    margin-bottom: 2%;
+  }
+  .rating-form {
+    margin-bottom: 4%;
+    .rating-container {
+      display: flex;
+      .message {
+        width: 30%;
+        text-align:left;
+        margin-left: 4%;
+      }
+      .stars-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .error {
+      border: 1px solid red;
+    }
+  }
+
+  .review-text {
+    .review-text-area {
+      background-color: lighten($input-border, 5%);
+      margin: 0;
+      border: none;
+      border-radius: 2px;
+      width: 100%;
+      height: 15rem;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    .review-button {
+      text-align: center;
+      width: 15%;
+      margin: 0 5%;
+      border-radius: 8px;
+      padding: 2.8% 5%;
+    }
+    .cancel {
+      color:gray;
+      text-align: center;
+      text-decoration: none;
+      a{
+        text-decoration: none;
+      }
+    }
+    .submit {
+      background-color:$main-blue;
+      color:white;
+      &:hover {
+        background-color: $hover-blue;
+      }
+    }
+  }
+}

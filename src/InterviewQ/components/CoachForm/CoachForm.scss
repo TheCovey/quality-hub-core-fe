@@ -1,0 +1,590 @@
+@import '../../../global/styles//variables';
+
+#overlay-coach-form {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(72, 72, 72, 0.4);
+	z-index: 1040;
+}
+
+.profile-img-coach-form {
+	border-radius: 50%;
+	width: 6.1rem;
+	height: 6.1rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $gray-avatar;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.slider {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+
+	input {
+		width: 465px !important;
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	.slider-dollar-amounts {
+		width: 465px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		padding: 0px !important;
+		p {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 28px;
+			color: #3c4043;
+		}
+	}
+
+	.slider-inner-boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.button {
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	font-size: 1.4rem;
+	height: 3.4rem;
+	padding: 0 2rem;
+	margin: 0.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.add-coach-form {
+	width: 790px;
+	height: 90%;
+	overflow: auto;
+	overflow-x: hidden;
+	padding-left: 61px;
+	padding-right: 61px;
+	background: white;
+	border-radius: 10px;
+	text-align: left;
+	// padding-bottom: 8.8rem;
+
+	input {
+		width: 100%;
+	}
+	select {
+		width: 100%;
+	}
+	// z-index: 1050;
+	margin-bottom: 1px;
+}
+
+.add-coach-form-background {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-content: flex-end;
+	align-items: flex-end;
+	width: 85rem;
+	height: 85vh;
+	// height: 81.7rem;
+	left: 50%;
+	top: 6.4rem;
+	transform: translate(-50%);
+	background: white;
+	border-radius: 10px;
+	z-index: 1050;
+	@media screen and (max-width: 550px) {
+		min-width: 550px;
+	}
+	padding-bottom: 8.8rem;
+}
+
+.done-modal {
+	position: absolute;
+	width: 634px;
+	height: 544px;
+	overflow: auto;
+	overflow-x: hidden;
+
+	left: 50%;
+	transform: translate(-50%);
+	padding-top: 149px;
+	padding-left: 91px;
+	padding-right: 91px;
+	background: white;
+	border-radius: 10px;
+	text-align: left;
+
+	z-index: 1050;
+
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+	.done-modal-img {
+		position: relative;
+		bottom: 16rem;
+		left: 4rem;
+	}
+}
+.done-modal-buttons {
+	button {
+		cursor: pointer;
+		border-radius: 5px;
+		width: 13.1rem;
+		height: 5.4rem;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+		padding: 0px;
+		color: #8c8c8c;
+		border: 1px solid #8c8c8c;
+		text-align: center;
+	}
+}
+.done-modal-set-availability-btn {
+	border: none !important;
+	color: #fff !important;
+	background-color: #096dd9;
+}
+
+.done-modal-checkcircle {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.done-modal-all-text {
+	position: relative;
+	bottom: 22rem;
+	text-align: center;
+}
+
+.done-modal-text-1 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 38px;
+	color: #202124;
+}
+
+.done-modal-text-2 {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: #3c4043;
+	margin-bottom: 4.8rem;
+	margin-top: 1.6rem;
+}
+
+.done-modal-content {
+	height: 282px;
+}
+.done-modal-buttons {
+	position: relative;
+	bottom: 20rem;
+	display: flex;
+	justify-content: space-between;
+	width: 354px;
+	margin: 0 auto;
+}
+
+.add-coach-set-availability-link {
+	text-decoration: none;
+}
+
+.close-coach-form-button {
+	cursor: pointer;
+	position: absolute;
+	top: 26px;
+	right: 24px;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	width: 24px !important;
+	height: 24px !important;
+	color: black;
+	outline: none;
+}
+.red-span {
+	color: #cf1322;
+}
+.red-span-key {
+	color: #cf1322;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 2.8rem;
+	text-align: right;
+	margin: 1.2rem 0 1.6rem;
+}
+.add-coach-form-header {
+	color: #096dd9;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 600;
+	margin-left: 10px;
+}
+
+.add-coach-form-row-1 {
+	display: flex;
+}
+
+.add-coach-form-row-2 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 28px;
+	margin-top: 15px;
+	color: #3c4043;
+}
+
+.add-coach-form-step-title {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	color: #5f6368;
+	// margin-top: 40px;
+}
+
+.add-coach-form-sub-title {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 38px;
+	color: #3c4043;
+	margin-top: 16px;
+}
+
+.add-coach-form-description {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 28px;
+	color: #3c4043;
+	margin-top: 3px;
+}
+
+.add-coach-form-row-6 {
+	margin-top: 24px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #3c4043;
+}
+
+.add-coach-form-row-6 {
+	margin-top: 24px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #3c4043;
+}
+
+.add-coach-form-row-7 {
+	margin-top: 1px;
+	border: 1px solid #dadce0;
+	box-sizing: border-box;
+	border-radius: 6px;
+	width: 100%;
+}
+
+textarea.add-coach-form-row-7 {
+	margin-top: 1px;
+	border: 1px solid #dadce0;
+	box-sizing: border-box;
+	border-radius: 6px;
+	width: 100%;
+	min-height: 60px;
+}
+.add-coach-form-hr-1 {
+	margin: 72px 0;
+	border: 1px solid #dadce0;
+}
+
+.add-coach-form-range-input {
+	margin: 0 auto;
+	margin-top: 64px;
+	width: 183px !important;
+}
+
+.add-coach-form-preview-container {
+	padding-left: 54px;
+	padding-right: 54px;
+	padding-bottom: 66px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 64px;
+	margin-bottom: 80px;
+	width: 410px;
+	border-radius: 8px;
+	border: 1px solid #d4d4d4;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+	.interview-button {
+		border: none !important;
+		width: 100%;
+		height: 45px;
+		padding: 1.4rem 2rem;
+		font-size: 1.4rem;
+		background-color: #efefef;
+		text-align: center;
+		color: #5f6368 !important;
+		border-radius: 1rem;
+		border-radius: 8px;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+
+		//cursor: pointer;
+	}
+}
+
+.add-coach-form-preview-close {
+	position: relative;
+	left: 313px;
+	top: 21px;
+}
+.add-coach-form-preview-name {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	color: #202124;
+	max-width: 17rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.add-coach-form-preview-amount {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: $price;
+}
+
+.coachformcard-info {
+	margin-top: 41px;
+	p {
+		display: flex;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 30px;
+
+		color: #3c4043;
+
+		.coachcard-icon {
+			margin-right: 9px;
+		}
+	}
+}
+
+.add-coach-form-preview-description {
+	p {
+		margin-top: 17px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 30px;
+		display: flex;
+		align-items: center;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		width: 400px;
+		margin-bottom: 10px;
+
+		color: #3c4043;
+	}
+}
+
+.coachformcard-footer {
+	margin-top: 21px;
+
+	.coachcard-links {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 5.2rem;
+		align-items: baseline;
+		display: flex;
+		justify-content: space-between;
+		.icon1 {
+			// margin-right: 21px;
+		}
+		// display: flex;
+	}
+}
+
+.add-coach-form-preview-top {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.add-coach-form-preview-top-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.add-coach-form-preview-coach-photo {
+	border-radius: 100%;
+	height: 90px;
+	width: 90px;
+}
+
+.add-coach-form-save-and-exit {
+	cursor: pointer;
+	border-radius: 4px;
+	width: 131px;
+	height: 54px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	color: #5f6368;
+	border: 1px solid #5f6368;
+}
+
+.add-coach-form-publish {
+	cursor: pointer;
+	border-radius: 4px;
+	text-align: center;
+	width: 131px;
+	height: 54px;
+	background-color: #096dd9;
+	color: #fff !important;
+	font-style: Medium;
+	font-size: 16px;
+	border: none !important;
+}
+input:focus#coach-form-price-slider {
+	border: none !important;
+}
+
+.add-coach-form-bottom-buttons {
+	display: flex;
+	width: 354px;
+	margin: 0 auto;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.missing-required-fields {
+	margin: 15px auto 40px;
+	text-align: center;
+}
+
+//Range slider code ****
+
+$main-color: #c4c4c4;
+$dot-color: #096dd9;
+
+input[type='range'] {
+	-webkit-appearance: none;
+	margin: 18px 20px;
+	width: 70%;
+	border: none;
+}
+input[type='range']:focus {
+	outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: $main-color;
+	border-radius: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	height: 25px;
+	width: 25px;
+	border-radius: 100%;
+	background: $dot-color;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -8px;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+	background: $main-color;
+}
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: $main-color;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+input[type='range']::-moz-range-thumb {
+	border: 1px solid #000000;
+	height: 36px;
+	width: 16px;
+	border-radius: 3px;
+	background: $dot-color;
+	cursor: pointer;
+}
+input[type='range']::-ms-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+	background: $main-color;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type='range']::-ms-fill-upper {
+	background: $main-color;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type='range']::-ms-thumb {
+	border: 1px solid #000000;
+	height: 36px;
+	width: 16px;
+	border-radius: 3px;
+	background: $dot-color;
+	cursor: pointer;
+}
+input[type='range']:focus::-ms-fill-lower {
+	background: $main-color;
+}
+input[type='range']:focus::-ms-fill-upper {
+	background: $main-color;
+}
+
+// End range slider code ***

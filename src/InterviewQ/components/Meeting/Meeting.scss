@@ -1,0 +1,161 @@
+// .meetingContainer {
+//     position: relative;
+// }
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    top: -6.4rem;
+    height: 100vh;
+    // border: 1px solid red;
+}
+
+.interviewq-video-button-toggle-color{
+    color: white !important;
+    background-color: red !important;
+    border: none !important;
+}
+
+.mybox{
+}
+
+// #chatArea {
+//     overflow-y: scroll;
+// }
+
+// .interviewq-meeting-chatbox{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     border: 1px solid green;
+//     height: 600px;
+//     width: 200px;
+//     transform-origin: top right;
+//     position: absolute;
+//     top: 100px;
+//     right: 0;
+// }
+
+// .interviewq-video-controls {
+//     display: flex;
+//     justify-content: space-around;
+// }
+
+// footer {
+//     width: 100vw;
+//     position: fixed;
+//     bottom: 0;
+//     height: 2%;
+//     background: white;
+// }
+
+// .videoChat {
+//     position: absolute;
+//     bottom: 0;
+// }
+
+.qwerty {
+    span{
+        border: 1px solid green;
+    }
+}
+
+.interviewq-two-video-screens{
+    width: 100%;
+    position: relative;
+    top: 6.4rem;
+    background: black;  
+}
+
+.interviewq-meeting-chatbox{
+    overflow-y: scroll;
+    // overflow-x: none !important;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 15px;
+}
+
+// .pMessage {
+//     text-overflow: clip;
+// }
+
+.theirVideoDiv {
+    height: 100vh;
+    max-width: 150vh;
+    position: relative;
+    margin: 0 auto;
+}
+
+.interviewq-video-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // z-index: 1000;
+    background: rgba($color: #000000, $alpha: .60)!important;
+}
+
+#theirVideoTag {
+    height: 100vh!important;
+    max-width: 150vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow-x: none;
+}
+
+#myVideoTag {
+    width: 30vh!important;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 10000;
+}
+
+#myMessage {
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+    height: 5vh;
+    width: 80%;
+}
+
+#sendMessage {
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 5vh;
+    width: 20%;
+}
+
+.interviewq-video-controls button{
+    color: white;
+    font-size: 1.6rem;
+    background: #096DD9;
+    border-radius: 13px;
+    padding: 0 10px;
+    margin: 12px 0;
+    width: 120px;
+    text-align: center;
+    border: 1px solid rgb(2, 84, 172);
+}
+
+
+.the-secret-is-cumin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 42vh;
+    height: 35vh!important;
+    position: absolute;
+    right: 2px;
+    top: 65px;
+    background: white;
+    border: 1px solid black;
+    padding: 5px;
+}

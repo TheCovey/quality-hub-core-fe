@@ -1,0 +1,242 @@
+// .see-preview-post-btn {
+// 	color: #096dd9;
+// 	font-size: 1.6rem;
+// 	text-decoration: none;
+// }
+
+.see-preview-btn {
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 0.4rem;
+	width: 13rem;
+	height: 3.6rem;
+	background-color: #096dd9;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	color: #ffffff;
+
+	&:hover {
+		background-color: #0050b3;
+	}
+}
+
+.dash-coachinfo {
+	width: 100%;
+}
+
+.see-preview {
+	border-top: 1px solid #dadce0;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	padding: 2.4rem 2.4rem 0;
+}
+
+.coachinfo-header {
+	display: flex;
+	align-items: center;
+	padding: 3.2rem 0 1.6rem;
+	border-bottom: 1px solid #dadce0;
+
+	.circle-blue {
+		width: 5.6rem;
+		height: 5.6rem;
+		border-radius: 50%;
+		background-color: #096dd9;
+		margin-right: 2.7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1 {
+		text-align: left;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		color: #202124;
+	}
+}
+
+.not-a-coach-header {
+	display: flex;
+	align-items: center;
+	padding: 1.6rem 0;
+	// border-bottom: 1px solid #dadce0;
+	.circle-blue {
+		width: 5.6rem;
+		height: 5.6rem;
+		border-radius: 50%;
+		background-color: #096dd9;
+		margin-right: 2.7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h2 {
+		text-align: left;
+		font-weight: 600;
+		font-size: 3rem;
+		color: #262626;
+	}
+}
+
+.not-a-coach-here {
+	color: #096dd9;
+	text-decoration: none;
+}
+
+.edit-post-slider {
+	width: 300px;
+}
+
+input:focus#edit-post-4 {
+	// :focus{
+	border: none !important;
+	// }
+}
+
+.slider-post {
+	margin-left: 35px;
+	margin-top: 0;
+	display: flex;
+	justify-content: center;
+
+	input {
+		width: 300px !important;
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	.slider-dollar-amounts-post {
+		width: 300px;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		padding: 0px !important;
+
+		p {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 28px;
+			color: #3c4043;
+		}
+	}
+
+	.slider-inner-boxes-post {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.not-a-coach {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-around;
+	align-items: center;
+
+	p {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 2rem;
+		line-height: 2.8rem;
+
+		color: #5f6368;
+	}
+
+	img {
+		width: 34rem;
+		height: auto;
+	}
+}
+
+.post-desc {
+	display: flex;
+	overflow-wrap: break-word;
+	max-width: 50rem;
+	text-align: left;
+	min-height: 7rem;
+	align-items: center;
+}
+
+.post-row {
+	display: flex;
+	align-items: center;
+	// min-height: 5rem;
+}
+
+.post-price {
+	p {
+		margin: 0.9rem 0;
+	}
+}
+
+.post-input {
+	select,
+	input {
+		margin: 0;
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 5rem;
+	border-bottom: 1px solid #dadce0;
+	padding: 0.8rem 2.4rem;
+
+	@media screen and (max-width: 380px) {
+		flex-direction: column;
+		height: 8rem;
+		margin-bottom: 1rem;
+		align-items: flex-start;
+	}
+}
+
+#edit-post-3,
+#edit-post-5 {
+	overflow-wrap: break-word;
+	width: 50rem;
+	height: 7rem;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+}
+
+#edit-post-5 {
+	margin-left: 6px;
+	overflow-wrap: break-word;
+	width: 50rem;
+	height: 4rem;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	margin-top: 0.5rem;
+}
+
+input#edit-post-0,
+input#edit-post-1 {
+	width: 100%;
+	margin: 0;
+}
+
+#edit-post-0,
+#edit-post-1,
+#edit-post-2,
+#edit-post-3,
+#edit-post-4,
+#edit-post-5 {
+	font-size: 16px;
+}
+
+.coach-post-status-header {
+	margin-bottom: 4.2rem;
+}

@@ -1,0 +1,276 @@
+// @import './App.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+	font-family: 'SFProDisplay';
+	src: local('SFProDisplay'),
+		url(./global/fonts/SFProDisplay/SF-Pro-Display-Regular.otf)
+			format('opentype');
+}
+
+@font-face {
+	font-family: 'SFProDisplay';
+	font-weight: 600;
+	src: local('SFProDisplay'),
+		url(./global/fonts/SFProDisplay/SF-Pro-Display-Semibold.otf)
+			format('opentype');
+}
+
+@font-face {
+	font-family: 'SFProDisplay';
+	font-weight: 900;
+	src: local('SFProDisplay'),
+		url(./global/fonts/SFProDisplay/SF-Pro-Display-Heavy.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'SFProDisplay';
+	font-weight: 700;
+	src: local('SFProDisplay'),
+		url(./global/fonts/SFProDisplay/SF-Pro-Display-Bold.otf) format('opentype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+	:focus {
+		outline: none;
+		// border: 1px solid #096DD9 !important;
+	}
+}
+
+html {
+	font-size: 62.5%;
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 10px;
+		height: 7px;
+		z-index: 9999999;
+	}
+	::-webkit-scrollbar-corner {
+		background: rgba(0, 0, 0, 0);
+	}
+	::-webkit-scrollbar-thumb {
+		max-height: 100px;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 100px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: inherit;
+		border-radius: 100px;
+	}
+	::-webkit-scrollbar-track-piece {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+body {
+	font-family: 'SFProDisplay', 'Roboto', sans-serif;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+.App {
+	text-align: center;
+}
+
+.not-nav {
+	margin-top: 6.4rem;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+a {
+	font-size: 1.5rem;
+}
+
+input,
+option,
+select,
+textarea {
+	border-radius: 0.4rem;
+	border: 1px solid silver;
+	font-family: inherit;
+	padding: 0.8rem 1rem;
+}
+input:focus,
+option:focus,
+select:focus,
+textarea:focus {
+	// :focus{
+	border: 1px solid #096dd9 !important;
+	// }
+}
+
+.form-btn {
+	background-color: white;
+	font-family: inherit;
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: pointer;
+	margin: 2rem 4rem;
+}
+
+.form-btn:disabled {
+	background-color: white;
+	font-family: inherit;
+	color: gray;
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: not-allowed;
+	margin: 2rem 4rem;
+}
+
+.submit-btn {
+	background-color: white;
+	font-family: inherit;
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: silver;
+	color: white;
+}
+
+.manage-btn {
+	background-color: white;
+	font-family: inherit;
+	border: 1px solid silver;
+	border-radius: 1.6rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: pointer;
+	margin-bottom: 1rem;
+	width: 220px;
+	outline: 0;
+	text-align: center;
+}
+
+.manage-btn:hover {
+	background-color: silver;
+	color: white;
+}
+
+.signout-btn {
+	background-color: white;
+	font-family: inherit;
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: pointer;
+}
+
+.signout-btn:focus {
+	outline: 0;
+}
+
+.signout-btn:hover {
+	background-color: silver;
+	color: white;
+}
+
+.danger {
+	background-color: red;
+	color: white;
+	font-weight: 900;
+	padding: 20px;
+}
+
+.input-label {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-label label {
+	text-align: left;
+	margin-bottom: -14px;
+}
+
+.input-label p {
+	align-self: flex-end;
+	margin: 0 0;
+}
+
+.sign-in-button,
+.input-label input {
+	width: 100%;
+}
+
+// label {
+// 	font-size: 1.4rem;
+// }
+
+.sign-in-or {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+.sign-in-or span {
+	background: #fff;
+	padding: 0 10px;
+}
+
+@keyframes birdwalk {
+	from {
+		margin-left: -40%;
+	}
+	to {
+		margin-left: 70%;
+	}
+}
+
+.quail-walk {
+	animation: birdwalk 5s infinite;
+	width: 100px;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(72, 72, 72, 0.4);
+	z-index: 999;
+	cursor: not-allowed;
+}
+
+.default-btn {
+	background-color: white;
+	font-family: inherit;
+	border: 1px solid silver;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	padding: 0.8rem 1.5%;
+	cursor: pointer;
+}
+
+.default-btn:hover {
+	background-color: silver;
+	color: white;
+}

@@ -1,0 +1,78 @@
+.delete-coach-post,
+.coach-post-status {
+	border: 1px solid #dadce0;
+	border-radius: 0.8rem;
+	height: 14.8rem;
+	margin: 3.2rem 0;
+	padding: 2.4rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		color: #202124;
+		text-align: left;
+	}
+
+	.delete-post,
+	.coach-post-status-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #5f6368;
+	}
+
+	.delete-warning {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+
+		color: #5f6368;
+	}
+
+	.delete-post-btn {
+		color: white;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 0.4rem;
+		width: 13rem;
+		height: 3.6rem;
+		background-color: #cf1322;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #ffffff;
+
+		&:hover {
+			background-color: #a8071a;
+		}
+	}
+
+	.update-post-btn {
+		background-color: #096dd9;
+		color: white;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 0.4rem;
+		width: 13rem;
+		height: 3.6rem;
+
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: #ffffff;
+
+		&:hover {
+			background-color: #0050b3;
+		}
+	}
+}
