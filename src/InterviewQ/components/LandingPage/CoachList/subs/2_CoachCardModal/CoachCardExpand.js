@@ -115,7 +115,7 @@ const CoachCard = ({ post, setOpen, open, openReviewModal }) => {
 										/>
 									</div>
 								)}
-									<MessageCoachButton coach={coach} post={post}/>
+									{/* <MessageCoachButton coach={coach} post={post}/> */}
 							</div>
 						
 						</div>

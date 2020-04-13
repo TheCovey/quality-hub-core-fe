@@ -122,7 +122,7 @@ const CoachCard = ({ post }) => {
 				
 				</div>
 					{/* <div className='message-icon'>{message()}</div> */}
-					<MessageCoachButton coach={coach} post={post}/>
+					{/* <MessageCoachButton coach={coach} post={post}/> */}
 			</div>
 			<div className="coachcard-info">
 				<p>
