@@ -55,29 +55,29 @@ const GridDropdown = () => {
 
 							<Link
 								to='/resumeq'
-								className='box'
+								className='box unclickable-icon'
 								onClick={() => setOpen(false)}>
 								{Resumeq()}
 								<p>ResumeQ</p>
 							</Link>
 
-							<Link to='#' className='box' onClick={() => setOpen(false)}>
+							<Link to='#' className='box unclickable-icon' onClick={() => setOpen(false)}>
 								{Designqicon()}
 								<p>DesignQ</p>
 							</Link>
 						</div>
 
 						<div className='grid-dropdown-top-row-2'>
-							<Link to='#' className='box' onClick={() => setOpen(false)}>
+							<Link to='#' className='box unclickable-icon' onClick={() => setOpen(false)}>
 								{Codeqicon()}
 								<p>CodeQ</p>
 							</Link>
 
-							<Link to='#' className='box' onClick={() => setOpen(false)}>
+							<Link to='#' className='box unclickable-icon' onClick={() => setOpen(false)}>
 								{Recruiterqicon()}
 								<p>RecruiterQ</p>
 							</Link>
-							<Link to='#' className='box' onClick={() => setOpen(false)}>
+							<Link to='#' className='box unclickable-icon' onClick={() => setOpen(false)}>
 								{Networkqicon()}
 								<p>NetworkQ</p>
 							</Link>
