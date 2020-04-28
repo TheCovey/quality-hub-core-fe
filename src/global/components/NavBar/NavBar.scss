@@ -340,3 +340,10 @@
 		line-height: 22px;
 	}
 }
+
+
+//DISABLING POINTER FOR SERVICES THAT DONT EXIST
+
+.unclickable-icon{
+	cursor: default;
+}

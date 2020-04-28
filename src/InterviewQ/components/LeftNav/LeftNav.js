@@ -27,7 +27,7 @@ export default function QNav() {
 				</div>
 			</NavLink>
 
-			<NavLink to='/interviewq/inbox' activeClassName='QNav-row-highlight'>
+			{/* <NavLink to='/interviewq/inbox' activeClassName='QNav-row-highlight'>
 				<div className='QNav-row'>
 					<Icon
 						icon={ICONS.INBOX}
@@ -37,7 +37,7 @@ export default function QNav() {
 					/>
 					<div className='QNav-btn'>Inbox</div>
 				</div>
-			</NavLink>
+			</NavLink> */}
 
 			<NavLink to='/interviewq/history' activeClassName='QNav-row-highlight'>
 				<div className='QNav-row'>
