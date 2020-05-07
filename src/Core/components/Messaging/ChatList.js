@@ -5,7 +5,6 @@ import { format } from 'date-fns';
 
 const ChatList = ({ setCurrentRoom, currentRoom, convList, theCurrentUser, setTheCurrentUser}) => {
 
-const [clickFast, setClickFast] = useState();
 const [prevRoom, setPrevRoom] = useState();
   const history= useHistory();
   
@@ -15,41 +14,17 @@ const [prevRoom, setPrevRoom] = useState();
     }
   }, [])
 
-  useEffect(()=>{
-    if(clickFast){
-      onConvoClick(clickFast)
-    }
-  },[clickFast])
-
   const [chatLog, setChatLog] = useState([]);
 
-  useEffect(() => {
-    if (currentRoom && currentRoom.id && theCurrentUser && theCurrentUser.roomSubscriptions[prevRoom.id] ){ 
-      theCurrentUser.roomSubscriptions[prevRoom.id].cancel();
-      connectToRoom(currentRoom.id, chatLog, setChatLog, setTheCurrentUser)
-    }
-   else if (currentRoom && currentRoom.id){
-      connectToRoom(currentRoom.id, chatLog, setChatLog, setTheCurrentUser)
-    }
-  },[currentRoom])
 
 
   const onConvoClick = (channel) => {
-     const  messageElements =  document.getElementById('message-list-div').childNodes;
-
-  for(let x=0; x < messageElements.length; x++){
-    for(let y=0; y< chatLog.length; y++){
-      if(messageElements[x] &&  chatLog[y] && messageElements[x].id !== chatLog[y].id){
-       messageElements[x].remove()
-      }
-    }    
-  }
-      setCurrentRoom(channel)
-      setPrevRoom(currentRoom);      
+   
   }
   return (
 		<div className='chat-list'>
-			{convList &&
+      CHAT LIST
+			{/* {convList &&
 				convList.map((channel, idx) => {
 					return (
 						<li
@@ -78,9 +53,9 @@ const [prevRoom, setPrevRoom] = useState();
 								</div>
 							)}
               {/* <div onClick={() => deleteConv(channel.id)}>X</div> */}
-						</li>
+						{/* </li>
 					);
-				})}
+				})} */} */}
 		</div>
 	);
 }

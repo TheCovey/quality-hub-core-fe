@@ -51,7 +51,7 @@ const NavBar = ({ loggedin, setLoggedin, history }) => {
 			localStorage.getItem('token') &&
 			!location.pathname.includes('interviewq/meeting')
 		) {
-			console.log('you wont');
+		
 			getUser();
 		} else if (
 			localStorage.getItem('token') &&

@@ -2,12 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 import ChatList from './ChatList';
-import { ChatManager, TokenProvider } from '@pusher/chatkit-client';
-import { tokenUrl, instanceLocator } from './config';
-import { getRooms } from './methods.js';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GET_QH_USER, CREATE_CHATUSER } from './resolvers';
 import './Messaging.scss';
+import io from 'socket.io-client'
 
 const Inbox = () => {
 
@@ -19,39 +17,34 @@ const Inbox = () => {
   const [toggle, setToggle]  = useState(0);
   const [scrolled, setScrolled] = useState(false)
 
-  const chatManager = new ChatManager({
-    instanceLocator,
-    userId: localStorage.getItem('id') ? localStorage.getItem('id') : 'none',
-    tokenProvider: new TokenProvider({
-      url: tokenUrl
-    })
-  })
+  // const chatManager = new ChatManager({
+  //   instanceLocator,
+  //   userId: localStorage.getItem('id') ? localStorage.getItem('id') : 'none',
+  //   tokenProvider: new TokenProvider({
+  //     url: tokenUrl
+  //   })
+  // })
 
   // const getRooms = () => {
-  //   chatManager.connect({
-  //     onAddedToRoom: room => {
-  //     }
-  //   }).then(currentUser => {
-  //     setConvList(currentUser.rooms.map(channel => {
-  //       return { name: channel.name, id: channel.id }
-  //     }))
-  //   })
+
   // }
   const [roomList, setRoomList] = useState();
+  const ENDPOINT = 'localhost:3300'
+let socket = io(ENDPOINT)
+const userId = localStorage.getItem('id')
+const room = 'testRoom'
+useEffect(() => {
+  socket.emit('join', {userId, room})
 
-    useEffect(() => {
-      getRooms(setConvList, setTheCurrentUser, setToggle, toggle, roomList, setRoomList);
-      
-    }, [toggle])
+    return () => {
+      console.log('unmount')
+      socket.emit('disconnect');
 
+      socket.off();
+    }
+}, [ENDPOINT, room])
     const sendMessage = (text, roomId) => {
-      chatManager.connect()
-    .then(currentUser => {
-      currentUser.sendMessage({
-        text: text,
-        roomId: roomId
-      })
-    })
+
   }
 
   useEffect(() => {
