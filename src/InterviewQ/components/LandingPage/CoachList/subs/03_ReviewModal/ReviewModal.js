@@ -16,6 +16,7 @@ const ReviewModal = ({
 		} else {
 			document.removeEventListener('mousedown', handleOutsideClick);
 		}
+		//eslint-disable-next-line
 	}, [reviewModal]);
 
 	const handleOutsideClick = e => {

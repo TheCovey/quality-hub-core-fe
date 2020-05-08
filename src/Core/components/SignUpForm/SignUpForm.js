@@ -19,7 +19,7 @@ import { SIGN_UP, CREATE_CHATUSER } from './subs/Mutation';
 
 // User Schema
 import { userSchema } from './subs/UserSchema';
-import { responsePathAsArray } from 'graphql';
+// import { responsePathAsArray } from 'graphql';
 
 const SignUpForm = props => {
 	const [signup, error] = useMutation(SIGN_UP);
@@ -56,6 +56,9 @@ const SignUpForm = props => {
 	// Form management/validation
 	useEffect(() => {
 		validateUser();
+		//linter wants validateUser in dep. arr. It could prob just be defined in the hook
+		//to avoid this, but dont want to mess with it rn
+		//eslint-disable-next-line
 	}, [user]);
 
 	const validateUser = () => {

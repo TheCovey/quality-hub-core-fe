@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { connectToRoom } from './methods';
-import { useHistory } from 'react-router-dom';
-import { format } from 'date-fns';
+import React, { useEffect } from 'react';
+// import { useHistory } from 'react-router-dom';
+// import { format } from 'date-fns';
 
-const ChatList = ({ setCurrentRoom, currentRoom, convList, theCurrentUser, setTheCurrentUser}) => {
+const ChatList = () => {
 
-const [prevRoom, setPrevRoom] = useState();
-  const history= useHistory();
+// const [prevRoom, setPrevRoom] = useState();
+//   const history= useHistory();
   
   useEffect(() => {
-    if (history.location.state && history.location.state.createdChannel){
-      setCurrentRoom(history.location.state.createdChannel)
-    }
+    // if (history.location.state && history.location.state.createdChannel){
+    //   // setCurrentRoom(history.location.state.createdChannel)
+    // }
   }, [])
 
-  const [chatLog, setChatLog] = useState([]);
 
-
-
-  const onConvoClick = (channel) => {
+//   const onConvoClick = (channel) => {
    
-  }
+//   }
   return (
 		<div className='chat-list'>
       CHAT LIST

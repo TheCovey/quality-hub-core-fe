@@ -60,7 +60,7 @@ export default function SignUp({
 
 	return (
 		<div className='initial-sign-up-container'>
-			<img src='/images/signup.svg' className='sign-up-image' />
+			<img alt='signup' src='/images/signup.svg' className='sign-up-image' />
 
 			<div className='sign-up'>
 				<div>

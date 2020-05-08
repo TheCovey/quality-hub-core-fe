@@ -115,6 +115,7 @@ const Availability = () => {
 	};
 	useEffect(() => {
 		refetch();
+		//eslint-disable-next-line
 	}, [currentMonth]);
 	const checkAvail = checkvar => {
 		if (dateAvails) {

@@ -7,7 +7,6 @@ import feedback from '../../../../global/icons/feedback.png';
 import styles from './Modal.module.scss';
 
 const Modal = (props) => {
-  console.log(props);
   return (
     <div className={styles.modal}>
       <div className={styles.wrapper}>

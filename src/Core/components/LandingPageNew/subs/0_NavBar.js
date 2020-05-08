@@ -28,7 +28,6 @@ export default function NavBar({ loggedin, setLoggedin, history }) {
 	};
 
 	useEffect(() => {
-		console.log(data);
 		if (data) {
 			if (data.checkToken.valid) {
 				localStorage.setItem('token', data.checkToken.token);
@@ -36,6 +35,7 @@ export default function NavBar({ loggedin, setLoggedin, history }) {
 				logout();
 			}
 		}
+		//eslint-disable-next-line
 	}, [data]);
 
 	return (

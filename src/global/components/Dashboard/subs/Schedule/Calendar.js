@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Calendar.scss';
-import { setMonth, getMonth, getYear, addMonths, subMonths, format, isAfter } from 'date-fns';
+import { setMonth, getMonth, getYear, addMonths, subMonths, isAfter } from 'date-fns';
 
 import Cells from './Cells';
 import CalendarDetail from './CalendarDetail';

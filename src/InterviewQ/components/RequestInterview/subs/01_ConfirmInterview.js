@@ -39,7 +39,6 @@ const ConfirmInterview = ({
 
 	const convertToUTC = obj => {
 		//This logic assumes 1 hour differences in timezones, but some timezones are fractions of hour differences. This needs to be changed later.
-		console.log(obj);
 		let localAvail = new Date(
 			obj.year,
 			obj.month - 1,
@@ -49,37 +48,32 @@ const ConfirmInterview = ({
 		);
 		let utc = zonedTimeToUtc(localAvail, localTime);
 		let utcArr = utc.toISOString().split(/[T:-]/g);
-		console.log(utc);
-		console.log(utcArr);
+	
 		const availAMin = obj.minute === 30 ? 30 : 0; //why the ternary? shouldn't it just be avalAMin = obj.minute?
 		let date2 = addMinutes(utc, 30);
 		let utcArr2 = date2.toISOString().split(/[T:-]/g);
-		console.log(date2);
 
-		const availAHour =
-			utcArr[3].charAt(0) === '0' ? utcArr[3].substr(1, 1) : utcArr[3];
-		const availAMonth =
-			utcArr[2].charAt(0) === '0' ? utcArr[2].substr(1, 1) : utcArr[2];
+const availAHour =
+utcArr[3].charAt(0) === '0' ? utcArr[3].substr(1, 1) : utcArr[3];
+const availAMonth =
+utcArr[2].charAt(0) === '0' ? utcArr[2].substr(1, 1) : utcArr[2];
 
-		let item3 =
-			utcArr2[1].charAt(0) == '0' ? utcArr2[1].substr(1, 1) : utcArr2[1];
-		console.log(utcArr2[1], item3);
-		console.log(utcArr2[1].charAt(0));
-		console.log(utcArr2[1].substr(1, 1));
-		const availBHour =
-			utcArr2[3].charAt(0) == '0' ? utcArr2[3].substr(1, 1) : utcArr2[3];
-		const availBMonth =
-			utcArr2[2].charAt(0) == '0' ? utcArr2[2].substr(1, 1) : utcArr2[2];
+let item3 =
+utcArr2[1].charAt(0) === '0' ? utcArr2[1].substr(1, 1) : utcArr2[1];
 
-		if (utcArr[1].charAt(0) === '0') {
-			utcArr[1] = utcArr[1].charAt(1);
-		}
+const availBHour =
+utcArr2[3].charAt(0) === '0' ? utcArr2[3].substr(1, 1) : utcArr2[3];
+const availBMonth =
+utcArr2[2].charAt(0) === '0' ? utcArr2[2].substr(1, 1) : utcArr2[2];
+
+if (utcArr[1].charAt(0) === '0') {
+	utcArr[1] = utcArr[1].charAt(1);
+}
 		const availA = `${obj.coach}-${utcArr[0]}-${utcArr[1]}-${availAMonth}-${availAHour}-${availAMin}`;
 		const availBMin = availAMin === 30 ? 0 : 30;
 		// const availBHour = availBMin === 30 ? availAHour : Number(availAHour) + 1;
 		// const availB = `${obj.coach}-${utcArr[0]}-${8}-${availAMonth}-${availBHour}-${availBMin}`
 		const availB = `${obj.coach}-${utcArr2[0]}-${item3}-${availBMonth}-${availBHour}-${availBMin}`;
-		console.log(availB);
 		// let availBDate = addMinutes(new Date())
 		let UTCdate = {
 			...obj,

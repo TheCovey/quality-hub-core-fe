@@ -57,9 +57,7 @@ const NavBar = ({ loggedin, setLoggedin, history }) => {
 			localStorage.getItem('token') &&
 			location.pathname.includes('interviewq/meeting')
 		) {
-			console.log(
-				'*************************************************************************',
-			);
+			
 			// setTimeout(getUser, 10000);
 			getUser();
 		}
@@ -84,6 +82,7 @@ const NavBar = ({ loggedin, setLoggedin, history }) => {
 				logout();
 			}
 		}
+		//eslint-disable-next-line
 	}, [location]);
 
 	return (

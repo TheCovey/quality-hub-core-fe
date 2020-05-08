@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import socketIOClient from 'socket.io-client';
 import '../Meeting.scss';
 import Draggable from 'react-draggable';
 
 const Room = (props) => {
-	const [theParty, setTheParty] = useState(false);
 
 	let io = socketIOClient.connect('https://qh-test-web-rtc.herokuapp.com');
 	let ROOM = `${props.unique}z`;
@@ -168,6 +167,7 @@ const Room = (props) => {
 
 	const sendMessageFunction = e => {
 		e.preventDefault();
+		//eslint-disable-next-line
 		if (document.querySelector('#myMessage').value != '') {
 			displayMessage(`${props.myName} : ${document.querySelector('#myMessage').value}`);
 			io.emit('send', {
@@ -256,13 +256,13 @@ const Room = (props) => {
 		window.close();
 	};
 
-	const style = {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		border: "solid 1px #ddd",
-		background: "#f0f0f0"
-	  };
+	// const style = {
+	// 	display: "flex",
+	// 	alignItems: "center",
+	// 	justifyContent: "center",
+	// 	border: "solid 1px #ddd",
+	// 	background: "#f0f0f0"
+	//   };
 
 	return (
 		<>

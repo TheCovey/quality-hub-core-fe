@@ -1,55 +1,62 @@
-import React, { useEffect, useState, useRef } from 'react';
-import MessageList from './MessageList';
+import React, { useEffect, useState } from 'react';
+// import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 import ChatList from './ChatList';
-import { useQuery } from '@apollo/react-hooks';
-import { GET_QH_USER, CREATE_CHATUSER } from './resolvers';
+// import { useQuery } from '@apollo/react-hooks';
+// import { GET_QH_USER } from './resolvers';
 import './Messaging.scss';
 import io from 'socket.io-client'
 
-const Inbox = () => {
+let socket
 
-  const {data: qhUser} = useQuery(GET_QH_USER);
+const Inbox = ({ location }) => {
   
-  const [convList, setConvList] = useState();
-  const [currentRoom, setCurrentRoom] = useState('none');
-  const [theCurrentUser, setTheCurrentUser] = useState();
-  const [toggle, setToggle]  = useState(0);
-  const [scrolled, setScrolled] = useState(false)
-
-  // const chatManager = new ChatManager({
-  //   instanceLocator,
-  //   userId: localStorage.getItem('id') ? localStorage.getItem('id') : 'none',
-  //   tokenProvider: new TokenProvider({
-  //     url: tokenUrl
-  //   })
-  // })
-
-  // const getRooms = () => {
-
-  // }
-  const [roomList, setRoomList] = useState();
+  // const {data: qhUser} = useQuery(GET_QH_USER);
+  
+  const [currentRoom] = useState('none');
+  // const [roomList, setRoomList] = useState();
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState();
+  
   const ENDPOINT = 'localhost:3300'
-let socket = io(ENDPOINT)
-const userId = localStorage.getItem('id')
-const room = 'testRoom'
-useEffect(() => {
-  socket.emit('join', {userId, room})
+  const userId = localStorage.getItem('id')
+  const room = 'testRoom'
+  
+  useEffect(() => {
+    socket = io(ENDPOINT)
+    socket.emit('join', {userId, room})
 
-    return () => {
-      console.log('unmount')
-      socket.emit('disconnect');
-
-      socket.off();
-    }
-}, [ENDPOINT, room])
-    const sendMessage = (text, roomId) => {
-
-  }
+      return () => {
+        socket.emit('disconnect');
+        console.log('unmount')
+        socket.disconnect()
+        // socket.off();
+      }
+  }, [userId])
 
   useEffect(() => {
-    document.querySelector('#messageContainer').scrollTop = 10000000;
-  }, [theCurrentUser])
+    socket.on('sendMessage', (message) => {
+      setMessages([...messages, message])
+    })
+  }, [messages])
+
+  // useEffect(()=> {
+  //   socket.emit('disconnect');
+  //   socket.disconnect()
+  //   console.log('heck')
+  // }, [newMessage])
+
+
+    const sendMessage = (text, roomId) => {
+      if(newMessage){
+        socket.emit('message', newMessage, room, userId)
+      }
+      console.log(messages, newMessage, socket.id)
+  }
+
+  // useEffect(() => {
+  //   document.querySelector('#messageContainer').scrollTop = 10000000;
+  // }, [theCurrentUser])
 // const chatContainer=document.getElementsByName('messageContainer');
 // // const chatAnchor = document.getElementsByName('chatAnchor');
 // const chatAnchor = useRef();
@@ -67,7 +74,7 @@ useEffect(() => {
         <h3>Chat</h3>
         <p>Select a conversation to chat</p>
         </div>
-        {convList ? <ChatList convList={convList} theCurrentUser={theCurrentUser} setCurrentRoom={setCurrentRoom} currentRoom={currentRoom} setTheCurrentUser={setTheCurrentUser} /> : <p className='no-messages'> You don't have any conversations yet! </p>}
+        <ChatList />
       </aside>
             <section className="chat-screen">
               {/* <header className="chat-header">{currentRoom.displayName}</header> */}
@@ -81,7 +88,7 @@ useEffect(() => {
               </div>
               </div>
               <div className="chat-footer">
-              {currentRoom === 'none' ? <h3>Select a conversation to chat</h3> : <MessageInput sendMessage={sendMessage} currentRoom={currentRoom}/>}
+              <MessageInput sendMessage={sendMessage} currentRoom={currentRoom} newMessage={newMessage} setNewMessage={setNewMessage}/>
               </div>
             </section>
   </div>

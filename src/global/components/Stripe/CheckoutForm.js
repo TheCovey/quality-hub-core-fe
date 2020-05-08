@@ -7,7 +7,7 @@ import { PAYMENT } from './Resolvers';
 const CheckoutForm = props => {
 	const [complete, setComplete] = useState(false);
 
-	const [makePayment, { loading, error, called }] = useMutation(PAYMENT);
+	const [makePayment, { loading }] = useMutation(PAYMENT);
 
 	const handleSubmit = async e => {
 		let { token, error } = await props.stripe.createToken({

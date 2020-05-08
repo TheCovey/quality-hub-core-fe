@@ -93,6 +93,7 @@ export default function Avatar() {
 					console.log(err);
 				});
 		}
+		//eslint-disable-next-line
 	}, [picture]);
 
 	return (

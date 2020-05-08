@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { ALL_BOOKINGS } from './Queries';
-import { format, getYear } from 'date-fns';
+import { format } from 'date-fns';
 import { convertToLocal } from '../../../../../global/utils/TZHelpers';
 
 
@@ -24,6 +24,7 @@ export const DisplayBookings = currentMonth => {
 			console.log('inner running')
 			setRenderBookings([...data.bookingsByCoach, ...data.bookingsBySeeker]);
 		}
+		//eslint-disable-next-line
 	}, [data, currentMonth]);
 
 	const sortBookingsFunction = array => {
@@ -46,6 +47,7 @@ export const DisplayBookings = currentMonth => {
 
 		array.forEach(appt => {
 			const localAppt = convertToLocal(appt);
+			//eslint-disable-next-line
 			if (Number(format(currentMonth, 'Myyyy')) == `${localAppt.month}${localAppt.year}`) {
 				if (localAppt.day === i && counter < 2) {
 					counter++;
@@ -80,10 +82,11 @@ export const DisplayBookings = currentMonth => {
 			sortBookings = sortBookingsFunction(renderBookings);
 		}
 		if (renderBookings && sortBookings) {
-			let counter = 0;
+			// let counter = 0;
 			for (let i = 1; i < 32; i++) {
 				renderPerCell(sortBookings, i);
 			}
 		}
+		//eslint-disable-next-line
 	}, [renderBookings]);
 };

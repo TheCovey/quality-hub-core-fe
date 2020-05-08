@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { GET_COACH_POST, UPDATE_POST } from '../Resolvers';
 import UnpublishModal from './UnpublishModal/UnpublishModal';
-import DoneModal from '../../../CoachForm/subs/DoneModal';
 import PublishedModal from './UnpublishModal/PublishedModal';
 
 const CoachPostStatus = () => {
@@ -22,7 +21,8 @@ const CoachPostStatus = () => {
       document.getElementById('overlay-confirm-interview').style.display = 'block';
     }  else {
       document.getElementById('overlay-confirm-interview').style.display = 'none';
-    }
+	}
+	//eslint-disable-next-line
   }, [open, success]);
 
   useEffect(() => {
@@ -31,6 +31,7 @@ const CoachPostStatus = () => {
 		} else {
 			document.removeEventListener('mousedown', handleOutsideClick);
 		}
+		//eslint-disable-next-line
 	}, [open]);
 
   const handleOutsideClick = e => {

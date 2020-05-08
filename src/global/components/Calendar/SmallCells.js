@@ -64,7 +64,7 @@ const SmallCells = ({
 				let distanceInMinutes = formatDistanceStrict(date1, date2, {
 					unit: 'minute',
 				});
-				if (distanceInMinutes == '30 minutes') {
+				if (distanceInMinutes === '30 minutes') {
 					if (isBefore(date1, date2)) {
 						bookingArray.push(dateAvails[x])
 						break;

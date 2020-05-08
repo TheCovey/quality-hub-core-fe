@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
 
 import { CREATE_REVIEW, GET_SEEKER_BOOKINGS } from '../Resolvers';
 import Rating from './2_Rating';
@@ -19,7 +18,6 @@ const ReviewForm = props => {
         }
         return booking
       })
-      console.log(newBookings);
       cache.writeQuery({query: GET_SEEKER_BOOKINGS, data: {...data, bookingsBySeeker: newBookings}})
     }
   });
@@ -76,10 +74,10 @@ const ReviewForm = props => {
   }
 
   useEffect(() => {
-    console.log(loading);
     if (called && !loading && !error) {
       props.setOpen(true);
     }
+    //eslint-disable-next-line
   }, [called, loading])
 
 	return (

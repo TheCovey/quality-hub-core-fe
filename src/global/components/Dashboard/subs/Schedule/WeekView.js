@@ -146,6 +146,7 @@ const WeekView = ({  setSelectedDate, selectedDate }) => {
 
 	useEffect(() => {
 		scheduleBody[0].scrollTo(0, 480);
+		//eslint-disable-next-line
 	}, []);
 
 	return (

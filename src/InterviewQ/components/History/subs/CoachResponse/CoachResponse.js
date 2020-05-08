@@ -24,6 +24,8 @@ export default function CoachResponse({ uniqueBooking }) {
 	useEffect(() => {
 		refetch();
 		setShowResponse(!showResponse);
+		//linter wants showResponse and refetch in dep arr
+		//eslint-disable-next-line
 	}, [hasResponse]);
 
 	return (

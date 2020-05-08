@@ -9,11 +9,11 @@ import './CoachCard.scss';
 import Icon from '../../../../../../global/icons/Icon';
 import { ICONS } from '../../../../../../global/icons/iconConstants';
 import { star, greystar } from '../../../../../../global/icons/star';
-import { message } from '../../../../../../global/icons/message';
+// import { message } from '../../../../../../global/icons/message';
 //Component
 import CoachModal from '../2_CoachCardModal/CoachCardModal';
 import ReviewModal from '../03_ReviewModal/ReviewModal';
-import MessageCoachButton from '../2_CoachCardModal/MessageCoachButton';
+// import MessageCoachButton from '../2_CoachCardModal/MessageCoachButton';
 
 const GET_COACHRATING = gql`
 	query RatingByCoach($coach_id: String!) {

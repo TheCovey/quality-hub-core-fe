@@ -49,6 +49,7 @@ export default function CoachStripeDashboard() {
 			// console.log(res);
 			setBalances(res.data.stripeBalance);
 		});
+		//eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {
@@ -56,6 +57,7 @@ export default function CoachStripeDashboard() {
 			// console.log(res);
 			setLink(res.data.createStripeLink);
 		});
+		//eslint-disable-next-line
 	}, []);
 
 	const handleClick = e => {

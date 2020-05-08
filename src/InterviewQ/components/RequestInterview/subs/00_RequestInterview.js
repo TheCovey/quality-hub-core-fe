@@ -1,23 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import SmallCalendar from '../../../../global/components/Calendar/SmallCalendar';
 import { Link } from 'react-router-dom';
 import {
 	format,
-	isSameMonth,
-	isSameDay,
-	toDate,
-	endOfMonth,
-	startOfWeek,
-	endOfWeek,
-	addDays,
-	startOfMonth,
-	getDate,
 	getMonth,
 	isBefore,
-	isAfter,
 	getYear,
-	getHours,
-	getMinutes,
 	formatDistanceStrict,
 	differenceInMilliseconds
 } from 'date-fns';
@@ -127,6 +115,7 @@ const RequestInteview = props => {
 				resumeURL: resumeURL,
 			});
 		}
+		//eslint-disable-next-line
 	}, [resumeURL]);
 
 	useEffect(() => {
@@ -134,6 +123,7 @@ const RequestInteview = props => {
 		if (bookedSlot) {
 			bookedSlot.classList.add('available-slot');
 		}
+		//eslint-disable-next-line
 	}, [currentSlots]);
 
 	useEffect(() => {
@@ -184,7 +174,7 @@ const RequestInteview = props => {
 				let distanceInMinutes = formatDistanceStrict(date1, date2, {
 					unit: 'minute',
 				});
-				if (distanceInMinutes == '30 minutes') {
+				if (distanceInMinutes === '30 minutes') {
 					if (isBefore(date1, date2)) {
 						bookingArray.push(dateAvails[x])
 						break;
@@ -273,6 +263,7 @@ const RequestInteview = props => {
 						<div className='request-interview-slot-list'>
 							{currentSlots ? (
 								currentSlots.map(time => {
+									//eslint-disable-next-line
 									if(time.day == currentDate && time.month == currentMonth && time.year == getYear(props.selectedCell)){
 
 									

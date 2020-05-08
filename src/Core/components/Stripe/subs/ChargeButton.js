@@ -14,7 +14,7 @@ const createCharge = gql`
 
 export default function ChargeButton() {
 
-    const [charge, error] = useMutation(createCharge)
+    const [charge] = useMutation(createCharge)
     // const token = localStorage.getItem('token')
     // const { email } = jwt.verify(token, JWT_SECRET)
     return (

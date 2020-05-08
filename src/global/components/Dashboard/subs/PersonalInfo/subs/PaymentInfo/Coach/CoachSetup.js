@@ -29,6 +29,7 @@ export default function CoachSetup({ refetch }) {
 			console.log('code: ', code);
 			updateStripeId({ variables: { code } }).then(res => refetch());
 		}
+		//eslint-disable-next-line
 	}, [code]);
 
 	return (

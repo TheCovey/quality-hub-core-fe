@@ -12,7 +12,6 @@ import TagInput from './06_TagInput';
 import DescInput from './07_DescInput';
 import PriceInput from './08_PriceInput';
 import Availability from '../Availability';
-import {Resizable} from 're-resizable';
 
 const CoachBasicInfo = ({ myArray, userData, setOpen, open }) => {
 	//GraphQL Queries/Mutations

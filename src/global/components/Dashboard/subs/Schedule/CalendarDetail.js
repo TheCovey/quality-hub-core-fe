@@ -5,7 +5,6 @@ import { useQuery, useMutation } from '@apollo/react-hooks';
 import {
 	format,
 	differenceInHours,
-	differenceInMilliseconds,
 	isAfter,
 	isBefore,
 	addHours,
@@ -31,7 +30,7 @@ const CalendarDetail = ({ selectedDate, setOpen, open }) => {
 
 	const history = useHistory();
 
-	const { data, refetch } = useQuery(ALL_BOOKINGS, {
+	const { data } = useQuery(ALL_BOOKINGS, {
 		variables: {
 			seekerId: localStorage.getItem('id'),
 			coachId: localStorage.getItem('id'),
@@ -40,7 +39,7 @@ const CalendarDetail = ({ selectedDate, setOpen, open }) => {
 
 	const [booking, setBooking] = useState([]);
 	const [allBookings, setAllBookings] = useState();
-	const [deleteBook, { client }] = useMutation(DELETE_BOOKING);
+	const [deleteBook] = useMutation(DELETE_BOOKING);
 
 	const sortBookingsFunction = array => {
 		array.sort((a, b) => {
@@ -84,6 +83,7 @@ const CalendarDetail = ({ selectedDate, setOpen, open }) => {
 				}))
 			);
 		}
+		//eslint-disable-next-line
 	}, [allBookings]);
 
 
@@ -94,7 +94,7 @@ const CalendarDetail = ({ selectedDate, setOpen, open }) => {
 	// 	}
 	// },[booking])
 
-	const localTime = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	// const localTime = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 	var canDelete = true;
 
@@ -107,13 +107,13 @@ const CalendarDetail = ({ selectedDate, setOpen, open }) => {
 		}
 	};
 
-	const moreThan1 = time => {
-		if (differenceInHours(new Date(), time) < 1) {
-			return false;
-		} else {
-			return true;
-		}
-	};
+	// const moreThan1 = time => {
+	// 	if (differenceInHours(new Date(), time) < 1) {
+	// 		return false;
+	// 	} else {
+	// 		return true;
+	// 	}
+	// };
 
 	const handleDelete = (id, event) => {
 		event.stopPropagation();

@@ -1,7 +1,6 @@
 // Libraries
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
 
 import Search from './subs/0_Search';
 import CoachCard from './subs/1_CoachCard';

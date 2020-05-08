@@ -1,11 +1,11 @@
 import React from 'react';
 
-import DeleteModal from './DeleteModal';
+// import DeleteModal from './DeleteModal';
 
-import useModal from '../../../../../utils/useModal';
+// import useModal from '../../../../../utils/useModal';
 
 export default function Delete({ setLoggedin }) {
-	const { isShowing, toggle } = useModal();
+	// const { isShowing, toggle } = useModal();
 
 	return (
 		<div className='settings-del-account'>

@@ -1,7 +1,5 @@
 // Libraries
 import React from 'react';
-import { gql } from 'apollo-boost';
-import { useQuery } from '@apollo/react-hooks';
 
 // Styles & Images
 import './Payment.scss';

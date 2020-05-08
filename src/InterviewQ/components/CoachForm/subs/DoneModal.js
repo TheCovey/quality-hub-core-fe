@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from '../../../../global/icons/Icon';
 import { ICONS } from '../../../../global/icons/iconConstants';
-import { checkcircle } from '../../../../global/icons/checkcircle';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const DoneModal = ({ closeWindow, setAvailability }) => {
@@ -16,7 +15,7 @@ const DoneModal = ({ closeWindow, setAvailability }) => {
 				/>
 			</button>
 			<div className='done-modal-content'>
-			<img className = 'done-modal-img' src='/images/confirmed.svg' />
+			<img alt='green checkmark' className = 'done-modal-img' src='/images/confirmed.svg' />
 				<div className='done-modal-all-text'>
 					<p className='done-modal-text-1'>Your coach post is live!</p>
 					<p className='done-modal-text-2'>

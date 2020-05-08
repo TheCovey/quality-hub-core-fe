@@ -1,6 +1,5 @@
 // Libraries
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_COACH_POST } from './subs/Resolvers';
 
@@ -12,7 +11,6 @@ import becomecoach from '../../../global/icons/becomecoach.png';
 
 // Components
 import CoachDash from './subs/CoachDash';
-import { spacecoach } from '../../../global/icons/SpaceCoach.js';
 
 export default function DashInterviewQ() {
 	const { data: coachPost, loading } = useQuery(GET_COACH_POST, {
@@ -29,7 +27,7 @@ export default function DashInterviewQ() {
 						<h2>Settings</h2>
 					</div> */}
 					{/* <div>{spacecoach()}</div> */}
-					<img src={becomecoach} />
+					<img alt='astronaut' src={becomecoach} />
 					{/* <p>
 						You aren't currently a coach! To become a coach, click{' '}
 						<Link className='not-a-coach-here' to='/interviewq'>

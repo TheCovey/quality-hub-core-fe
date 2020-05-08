@@ -1,7 +1,6 @@
 // Libraries
 import React, { useState, useEffect } from 'react';
 import { useQuery, useLazyQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
 
 // Styles
 import './Search.scss';
@@ -32,6 +31,7 @@ export default function Search({ fields, setFields, refetch }) {
 			let ids = user_data && user_data.users.map(user => user.id);
 			refetch({ ...fields, ids });
 		}
+		//eslint-disable-next-line
 	}, [fields]);
 
 	useEffect(() => {

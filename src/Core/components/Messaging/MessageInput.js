@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import { handleSubmit } from '../../../InterviewQ/components/CoachForm/subs/Functions';
+import React from 'react';
 
-const MessageInput = ({ sendMessage, currentRoom }) => {
-
-  const [message, setMessage] = useState('')
+const MessageInput = ({ sendMessage, currentRoom, newMessage, setNewMessage }) => {
 
   const handleChange = (e) => {
-    setMessage(e.target.value)
+    setNewMessage(e.target.value)
   }
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    sendMessage(message, currentRoom.id)
-    setMessage('')
+    sendMessage()
+    setNewMessage('')
   }
 
   return(
@@ -20,7 +17,7 @@ const MessageInput = ({ sendMessage, currentRoom }) => {
         className="send-message-form" onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
-          value={message}
+          value={newMessage}
           placeholder="Type a message..."
           type="text" />
       </form>
