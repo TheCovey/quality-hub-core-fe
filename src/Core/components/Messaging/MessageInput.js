@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageInput = ({ sendMessage, currentRoom, newMessage, setNewMessage }) => {
+const MessageInput = ({ sendMessage, currentRoom, newMessage, setNewMessage, theMessage }) => {
 
   const handleChange = (e) => {
     setNewMessage(e.target.value)
@@ -16,8 +16,8 @@ const MessageInput = ({ sendMessage, currentRoom, newMessage, setNewMessage }) =
       <form
         className="send-message-form" onSubmit={handleSubmit}>
         <input
+        value={newMessage}
           onChange={handleChange}
-          value={newMessage}
           placeholder="Type a message..."
           type="text" />
       </form>

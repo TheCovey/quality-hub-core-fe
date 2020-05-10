@@ -13,7 +13,7 @@ import { star, greystar } from '../../../../../../global/icons/star';
 //Component
 import CoachModal from '../2_CoachCardModal/CoachCardModal';
 import ReviewModal from '../03_ReviewModal/ReviewModal';
-// import MessageCoachButton from '../2_CoachCardModal/MessageCoachButton';
+import MessageCoachButton from '../2_CoachCardModal/MessageCoachButton';
 
 const GET_COACHRATING = gql`
 	query RatingByCoach($coach_id: String!) {
@@ -122,7 +122,7 @@ const CoachCard = ({ post }) => {
 				
 				</div>
 					{/* <div className='message-icon'>{message()}</div> */}
-					{/* <MessageCoachButton coach={coach} post={post}/> */}
+					<MessageCoachButton coach={coach} post={post}/>
 			</div>
 			<div className="coachcard-info">
 				<p>
