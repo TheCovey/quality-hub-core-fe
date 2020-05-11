@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageInput = ({ sendMessage, currentRoom, newMessage, setNewMessage, theMessage }) => {
+const MessageInput = ({ sendMessage, newMessage, setNewMessage }) => {
 
   const handleChange = (e) => {
     setNewMessage(e.target.value)

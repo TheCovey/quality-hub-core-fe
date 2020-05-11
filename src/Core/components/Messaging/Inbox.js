@@ -8,18 +8,17 @@ import { initState, messageReducer } from './chatReducer'
 
 let socket;
 
-const Inbox = ({ location }) => {
+const Inbox = () => {
 
   const [state, dispatch] = useReducer(messageReducer, initState)
 
   const lastChat = localStorage.getItem('chatId');
   const [currentRoom, setCurrentRoom] = useState(lastChat);
-  // const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
   const ENDPOINT = "localhost:3300";
   const userId = localStorage.getItem("id");
-//  console.log(userId, 'this')
+
   useEffect(() => {
     socket = io(ENDPOINT);
     if (currentRoom) {
@@ -28,11 +27,12 @@ const Inbox = ({ location }) => {
         .get(`http://${ENDPOINT}/api/${currentRoom}`)
         .then((res) => dispatch({ type: 'FETCH_HISTORY_SUCCESS', payload: res.data}));
     }
+    socket.on("message", (message) => {
+      dispatch({ type: 'UPDATE_LIVE_MESSAGE', payload: message});
+    });
     return () => {
       socket.emit("disconnect");
-      // console.log("unmount");
       socket.disconnect();
-      // socket.off();
     };
   }, [userId]);
 
@@ -48,36 +48,16 @@ const Inbox = ({ location }) => {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
-    // console.log(messages, newMessage, socket.id);
   };
 
   const changeRoom = (roomId) => {
     setCurrentRoom(roomId)
-    // setMessages([]);
-    console.log('changeRoom', roomId)
+    localStorage.setItem('chatId', roomId)
     socket.emit("changeRoom", { userId, room: roomId });
           axios
             .get(`http://${ENDPOINT}/api/${roomId}`)
             .then((res) => dispatch({ type: 'FETCH_HISTORY_SUCCESS', payload: res.data}));
-
   };
-  useEffect(() => {
-    socket.on("message", (message) => {
-      console.log('in the socket')
-      dispatch({ type: 'UPDATE_LIVE_MESSAGE', payload: message});
-    });
-    console.log('in the hook')
-  }, []);
-console.log(socket)
-  // useEffect(() => {
-  //   const fetchOldMessages = () => {
-  //     setMessages([]);
-  //     axios
-  //       .get(`http://${ENDPOINT}/api/${currentRoom}`)
-  //       .then((res) => setMessages([...res.data]));
-  //   };
-  //   fetchOldMessages();
-  // }, [currentRoom]);
 
   return (
     <div className="inbox-container">

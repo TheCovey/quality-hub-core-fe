@@ -18,19 +18,21 @@ export const GET_QH_USER = gql`
 }
 `
 
-export const GET_RECIPIENT = gql`
-  query{
-    user{
+// export const GET_RECIPIENT = gql`
+//   query{
+//     user{
+//       first_name
+//       last_name
+//     }
+//   }
+// `
+
+export const GET_USER = gql`
+  query user($id: ID!){
+    user(id: $id){
+      image_url
       first_name
       last_name
-    }
-  }
-`
-
-export const GET_CHAT_IMG = gql`
-  query user($id: String!){
-    user(id: id){
-      image_url
     }
   }
 `

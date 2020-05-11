@@ -1,57 +1,25 @@
 import React, { useEffect, useState } from 'react';
-// import { useHistory } from 'react-router-dom';
-// import { format } from 'date-fns';
 import axios from 'axios';
+import ChatListItem from './ChatListItem'
 
-const ChatList = ({currentRoom, setCurrentRoom, changeRoom}) => {
+const ChatList = ({currentRoom, changeRoom}) => {
   
 	const [allRooms, setAllRooms] = useState([])
 
   useEffect(() => {
 	axios.get(`http://localhost:3300/api/rooms/${localStorage.getItem("id")}`)
-	.then(res => setAllRooms(res.data))
+	.then((res) => {
+		setAllRooms(res.data)
+	})
 	.catch(err => console.log(err))
   }, [])
 
-// const onRoomClick = (roomId) => {
-// 	console.log('roomClick', roomId, "current", currentRoom)
-// 	setCurrentRoom(roomId)
-// 	return changeRoom(roomId)
-// }
-// console.log(currentRoom)
   return (
 		<div className='chat-list'>
 			 {
-				allRooms.map((channel, idx) => {
+				allRooms.map((room) => {
 					return (
-						<li
-							onClick={() => changeRoom(channel.id)}
-							key={channel.id}
-							style={
-								channel === currentRoom
-									? { fontWeight: '900', backgroundColor: '#e7f2fe' }
-									: { fontWeight: '100' }
-							}>
-								{channel.id}
-							{/* <div className='chat-conv-detail'>
-								<span>{channel.displayName}</span>
-								<span className='chat-timestamp'> */}
-                  {/* {channel.lastMessageAt ?
-                  format(new Date(), 'Mdyy') ===
-									format(new Date(channel.lastMessageAt), 'Mdyy')
-										? format(new Date(channel.lastMessageAt), 'p')
-										: format(new Date(channel.lastMessageAt), 'M/d/yy') : null}
-								</span>
-							</div>
-
-							{channel.id === currentRoom.id ? null : channel.unreadCount ===
-							  0 ? null : (
-								<div className='chat-unread'>
-									<span>{channel.unreadCount}</span>
-								</div>
-							)} */}
-               {/* <div onClick={() => deleteConv(channel.id)}>X</div>  */}
-						</li>
+						<ChatListItem room={room} changeRoom={changeRoom} currentRoom={currentRoom} />
 					);
 				})} 
 		</div>

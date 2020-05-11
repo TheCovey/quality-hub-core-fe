@@ -1,7 +1,7 @@
 export const initState = {
     loading: true,
     error: '',
-    messages: []
+    messages: [],
 }
 
 export const messageReducer = (state, action) => {
