@@ -13,18 +13,19 @@ const ChatList = ({currentRoom, setCurrentRoom, changeRoom}) => {
 	.catch(err => console.log(err))
   }, [])
 
-const onRoomClick = (roomId) => {
-	setCurrentRoom(roomId)
-	changeRoom(roomId)
-}
-console.log(currentRoom)
+// const onRoomClick = (roomId) => {
+// 	console.log('roomClick', roomId, "current", currentRoom)
+// 	setCurrentRoom(roomId)
+// 	return changeRoom(roomId)
+// }
+// console.log(currentRoom)
   return (
 		<div className='chat-list'>
 			 {
 				allRooms.map((channel, idx) => {
 					return (
 						<li
-							onClick={()=> onRoomClick(channel)}
+							onClick={() => changeRoom(channel.id)}
 							key={channel.id}
 							style={
 								channel === currentRoom

@@ -24,14 +24,16 @@ const MessageCoachButton = ({ post, coach }) => {
       const sender = localStorage.getItem('id')
       const reciever = post.coach.id
       const chatId = [sender, reciever].sort().join('')
-
+        localStorage.setItem('chatId', chatId)
           axios.post('http://localhost:3300/api/newRoom', { id: chatId, user_1: sender, user_2: reciever })
           .then(res => {
-              history.push(`/interviewq/inbox/${chatId}`)
+            //   console.log(res, { id: chatId, user_1: sender, user_2: reciever })
+              history.push(`/interviewq/inbox`)
             })
           .catch(error => {
               if (error.response.status === 409){
-                history.push(`/interviewq/inbox/${chatId}`)
+                history.push(`/interviewq/inbox`)
+                // console.log(error.response, { id: chatId, user_1: sender, user_2: reciever })
               }
               else{
                   alert(`Oops, something went wrong. Please try again later.`)

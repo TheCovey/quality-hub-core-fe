@@ -9,14 +9,14 @@ let socket;
 
 const Inbox = ({ location }) => {
 
-  const redirect = location.pathname.split("/")[3];
-  const [currentRoom, setCurrentRoom] = useState(redirect || "ck6e641ap00630760d1ye5sr6ck9ykjhty00fa0760l316vd98");
+  const lastChat = localStorage.getItem('chatId');
+  const [currentRoom, setCurrentRoom] = useState(lastChat);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
   const ENDPOINT = "localhost:3300";
   const userId = localStorage.getItem("id");
- console.log(userId, 'this')
+//  console.log(userId, 'this')
   useEffect(() => {
     socket = io(ENDPOINT);
     if (currentRoom) {
@@ -33,7 +33,7 @@ const Inbox = ({ location }) => {
     };
   }, [userId]);
 
-  const sendMessage = () => {
+  const sendMessage = (roomId) => {
     if (newMessage) {
       socket.emit("sendMessage", newMessage, currentRoom, userId);
       const savedMessage = {
@@ -45,21 +45,25 @@ const Inbox = ({ location }) => {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
-    console.log(messages, newMessage, socket.id);
+    // console.log(messages, newMessage, socket.id);
   };
 
   const changeRoom = (roomId) => {
+    setCurrentRoom(roomId)
     setMessages([]);
+    console.log('changeRoom', roomId)
     socket.emit("changeRoom", { userId, room: roomId });
           axios
-            .get(`http://${ENDPOINT}/api/${currentRoom}`)
+            .get(`http://${ENDPOINT}/api/${roomId}`)
             .then((res) => setMessages([...res.data]));
 
   };
   useEffect(() => {
     socket.on("message", (message) => {
+      console.log('in the socket')
       setMessages([...messages, message]);
     });
+    console.log('in the hook')
   }, [messages]);
 
   // useEffect(() => {
