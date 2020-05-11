@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import MessageInput from "./MessageInput";
 import ChatList from "./ChatList";
 import "./Messaging.scss";
 import io from "socket.io-client";
 import axios from "axios";
+import { initState, messageReducer } from './chatReducer'
 
 let socket;
 
 const Inbox = ({ location }) => {
 
+  const [state, dispatch] = useReducer(messageReducer, initState)
+
   const lastChat = localStorage.getItem('chatId');
   const [currentRoom, setCurrentRoom] = useState(lastChat);
-  const [messages, setMessages] = useState([]);
+  // const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
   const ENDPOINT = "localhost:3300";
@@ -23,7 +26,7 @@ const Inbox = ({ location }) => {
       socket.emit("join", { userId, room: currentRoom });
       axios
         .get(`http://${ENDPOINT}/api/${currentRoom}`)
-        .then((res) => setMessages([...res.data, ...messages]));
+        .then((res) => dispatch({ type: 'FETCH_HISTORY_SUCCESS', payload: res.data}));
     }
     return () => {
       socket.emit("disconnect");
@@ -50,22 +53,22 @@ const Inbox = ({ location }) => {
 
   const changeRoom = (roomId) => {
     setCurrentRoom(roomId)
-    setMessages([]);
+    // setMessages([]);
     console.log('changeRoom', roomId)
     socket.emit("changeRoom", { userId, room: roomId });
           axios
             .get(`http://${ENDPOINT}/api/${roomId}`)
-            .then((res) => setMessages([...res.data]));
+            .then((res) => dispatch({ type: 'FETCH_HISTORY_SUCCESS', payload: res.data}));
 
   };
   useEffect(() => {
     socket.on("message", (message) => {
       console.log('in the socket')
-      setMessages([...messages, message]);
+      dispatch({ type: 'UPDATE_LIVE_MESSAGE', payload: message});
     });
     console.log('in the hook')
-  }, [messages]);
-
+  }, []);
+console.log(socket)
   // useEffect(() => {
   //   const fetchOldMessages = () => {
   //     setMessages([]);
@@ -94,7 +97,7 @@ const Inbox = ({ location }) => {
         <div className="message-container-container">
           <div className="message-container" id="messageContainer">
             <ul className="chat-messages" id="message-list-div">
-              {messages.map((message) => (
+              {state.messages.map((message) => (
                 <li
                   key={message.created_at}
                   className={
