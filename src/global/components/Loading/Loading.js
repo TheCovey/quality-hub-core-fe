@@ -3,9 +3,9 @@ import React from 'react';
 const Loading = props => {
 	return (
 		<div>
-			{/* Copied loader off of random site. Would be cool to have our own custom one?! */}
+			{/* Loading image from loading.io */}
 			<img
-				src='loading2.gif'
+				src='./loadingIcon.gif'
 				height='100px'
 				width='100px'
 				alt='loading animation'
